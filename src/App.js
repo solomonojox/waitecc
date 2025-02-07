@@ -6,6 +6,7 @@ import Services from './Pages/Services';
 import ContactUs from './Pages/ContactUs';
 import Pricing from './Pages/Pricing';
 
+import Team from './Pages/Team.jsx'
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/team" element={<Team/>}/>
         </Routes>
       </Router>
     </div>
