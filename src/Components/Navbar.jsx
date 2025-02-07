@@ -3,11 +3,11 @@ import assets from "../Assets/assets";
 import { Link } from "react-router-dom";
 
 import { FaBars, FaTimes } from "react-icons/fa";
-import { IoMdArrowDropdown } from "react-icons/io";
+// import { IoMdArrowDropdown } from "react-icons/io";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [innerMenu, setInnerMenu] = useState(false);
+  // const [innerMenu, setInnerMenu] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
