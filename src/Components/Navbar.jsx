@@ -14,12 +14,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md z-50">
+    <nav className="bg-white shadow-md border z-50 h-20 flex">
       <div className="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-4">
-          <img src={assets.logo} alt="Logo" className="w-28" />
-        </div>
+        <Link to='/' className="flex items-center space-x-4 cursor-pointer">
+          <img src={assets.waitecclogo} alt="Logo" className="w-40" />
+        </Link>
 
         {/* Search Bar */}
         {/* <div className="hidden lg:flex mx-6">
@@ -82,59 +82,37 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white shadow-md py-10 px-6">
+        <div className="lg:hidden bg-white absolute top-20 w-full shadow-md py-10 px-6">
           <div className="space-y-4">
-            {/* Explore Dropdown */}
-            <div>
-              <button className="text-gray-800 font-medium hover:text-primary flex items-center" onClick={() => setInnerMenu(!innerMenu)}>
-                Explore <IoMdArrowDropdown />
-              </button>
-              <ul className={`mt-2 space-y-2 ${innerMenu ? "block" : "hidden"}`}>
-                <li>
-                  <Link
-                    to="#courses"
-                    className="block px-4 py-2 hover:bg-gray-100 text-gray-700"
-                  >
-                    Courses
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="#programs"
-                    className="block px-4 py-2 hover:bg-gray-100 text-gray-700"
-                  >
-                    Programs
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="#diplomatic-training"
-                    className="block px-4 py-2 hover:bg-gray-100 text-gray-700"
-                  >
-                    Diplomatic Training
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Other Links */}
             <Link
-              to="#careers"
-              className="block text-gray-800 font-medium hover:text-primary"
+              to="/"
+              className="text-gray-800 font-medium hover:text-primary block"
             >
-              Careers
+              Home
             </Link>
             <Link
-              to="#login"
-              className="block text-gray-800 font-medium hover:text-primary"
+              to="/services"
+              className="text-gray-800 font-medium hover:text-primary block"
             >
-              Login
+              Services
             </Link>
             <Link
-              to="#signup"
-              className="block bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-hoverPrimary transition"
+              to="/pricing"
+              className="text-gray-800 font-medium hover:text-primary block"
             >
-              Sign Up
+              Pricing
+            </Link>
+            <Link
+              to="/team"
+              className="text-gray-800 font-medium hover:text-primary block"
+            >
+              Our team
+            </Link>
+            <Link
+              to="/contact"
+              className="text-gray-800 font-medium hover:text-primary block"
+            >
+              Contact
             </Link>
           </div>
         </div>

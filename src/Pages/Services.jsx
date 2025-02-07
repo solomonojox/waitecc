@@ -1,10 +1,9 @@
-import React from 'react'
+import React from 'react';
 import assets from '../Assets/assets';
 import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer'
+import Footer from '../Components/Footer';
 
 import { FaBrain, FaBullhorn, FaEnvelope, FaSearchDollar, FaVideo, FaPaintBrush, FaLaptopCode, FaChartLine, FaFileAlt } from "react-icons/fa";
-
 
 const Services = () => {
     const services = [
@@ -61,35 +60,41 @@ const Services = () => {
                 <Navbar />
             </div>
 
-            <div>
-                <div className='flex items-center justify-center px-20'>
-                    <div className='space-y-4'>
-                        <p className='text-7xl font-semibold'>Transform Your Brand with AI-Driven Marketing & Creative Solutions</p>
-                        <p className='text-[20px]'>From AI-powered digital strategies to stunning visual content and seamless web experiences, our services are designed to elevate your business. Whether you're looking to boost engagement, optimize campaigns, or craft compelling brand stories, we've got you covered.</p>
-                        <button className='bg-primary px-10 py-4 rounded-lg text-white text-lg'>View More</button>
-                    </div>
-                    <img src={assets.services} alt="headerimg" className='w-[600px]' />
+            {/* Hero Section */}
+            <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-10 lg:px-20 shadow-lg h-[100dvh] bg-gradient-to-r from-blue-900 via-indigo-700 to-purple-900 text-white overflow-hidden">
+                <div className="space-y-4 lg:w-[50%]">
+                    <p className="text-4xl lg:text-5xl font-semibold leading-tight">
+                        Transform Your Brand with AI-Driven Marketing & Creative Solutions
+                    </p>
+                    <p className="lg:text-[20px]">
+                        From AI-powered digital strategies to stunning visual content and seamless web experiences, our services are designed to elevate your business. Whether you're looking to boost engagement, optimize campaigns, or craft compelling brand stories, we've got you covered.
+                    </p>
+                    <button className="bg-secondary hover:bg-hoverSecondary px-8 py-4 rounded-lg text-white text-lg font-medium transition-colors">
+                        View More
+                    </button>
                 </div>
+                <img src={assets.services} alt="headerimg" className="lg:w-[50%] max-w-full mt-6 lg:mt-0 hidden lg:flex" />
+            </div>
 
-                <div className='flex flex-col items-center justify-center mt-20 py-10 px-20'>
-                    <h1 className='text-[3vmax]'>Our services</h1>
-                    <div className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {services.map((service, index) => (
-                            <div key={index} className="rounded-2xl border shadow-md p-6 hover:shadow-xl transition-shadow bg-white text-start">
-                                <div className="flex flex-col">
-                                    {service.icon}
-                                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                                    <p className="text-gray-600">{service.description}</p>
-                                </div>
+            {/* Services Section */}
+            <div className="flex flex-col items-center justify-center mt-20 py-10 lg:px-20">
+                <h1 className="text-[3vmax] text-center mb-10 font-bold">Our Services</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-10">
+                    {services.map((service, index) => (
+                        <div key={index} className="rounded-2xl border shadow-md p-6 hover:shadow-xl transition-shadow bg-white text-start">
+                            <div className="flex flex-col">
+                                {service.icon}
+                                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                                <p className="text-gray-600">{service.description}</p>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
-            <Footer/>
+            <Footer />
         </div>
-    )
-}
+    );
+};
 
-export default Services
+export default Services;

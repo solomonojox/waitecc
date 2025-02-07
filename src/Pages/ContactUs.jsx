@@ -11,7 +11,10 @@ import { MdOutlineAttachEmail, MdOutlinePhoneAndroid } from "react-icons/md";
 const ContactUs = () => {
     return (
         <div className="">
-            <Navbar />
+            <div className="sticky top-0 z-50">
+                <Navbar />
+            </div>
+
             <div className="bg-white flex">
                 {/* Left Side with Info */}
                 <div className="hidden w-2/5 h-[100dvh] p-8 bg-blue-50 lg:flex flex-col justify-between"
@@ -31,7 +34,7 @@ const ContactUs = () => {
                 </div>
 
                 {/* Right Side Form */}
-                <div className="lg:w-3/5 h-[100dvh] flex flex-col justify-center items-center py-8 px-4 lg:px-16 bg-white rounded-r-2xl">
+                <div className="lg:w-3/5 w-full h-[100dvh] flex flex-col justify-center items-center py-8 px-4 lg:px-16 bg-white rounded-r-2xl">
                     <div className='w-full'>
                         <h1 className="text-2xl font-bold mb-4">GET IN TOUCH</h1>
                         <p className="text-gray-700 mb-8">
