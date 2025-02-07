@@ -72,7 +72,7 @@ const BrandSocialMediaManagement = () => {
                     <motion.div
                         key={index}
                         whileHover={{ scale: 1.05 }}
-                        className={`rounded-md shadow-md w-[350px] overflow-hidden hover:border-blue-500 bg-white`}
+                        className={`rounded-md shadow-md w-[300px] overflow-hidden hover:border-blue-500 bg-white`}
                     >
                         <div className={`${plan.bgColor} p-6 text-center`}>
                             <h2 className="text-2xl font-semibold">{plan.title}</h2>
