@@ -10,12 +10,14 @@ import ContentCreationGraphicDesign from '../Pricing/ContentCreationGraphicDesig
 const Pricing = () => {
     return (
         <div>
-            <Navbar />
-            
+            <div className="sticky top-0 z-50">
+                <Navbar />
+            </div>
+
             <div>
-                <AiDigitalContentMarketing/>
-                <BrandSocialMediaManagement/>
-                <ContentCreationGraphicDesign/>
+                <AiDigitalContentMarketing />
+                <BrandSocialMediaManagement />
+                <ContentCreationGraphicDesign />
             </div>
 
             <Footer />
