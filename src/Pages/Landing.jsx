@@ -54,6 +54,47 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Testimonials */}
+      <section className="py-16 md:px-8 bg-white">
+        <div className="md:px-4">
+          <h1 className="text-3xl font-semibold text-center">What people say</h1>
+          <p className="text-center mb-8">Discover what our satisfied customers have to say about our services</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col items-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 mb-4 rounded-full overflow-hidden">
+                <img src={assets.testimony1} alt="testimony img" className="w-full h-full object-cover" />
+              </div>
+              <h2 className="text-lg font-semibold text-white">John Doe</h2>
+              <p className="text-sm text-gray-200">United States</p>
+              <p className="text-gray-100 text-sm">"This course has significantly improved my skills and provided me with tools to excel in my career. Highly recommended!"</p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col text-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 mb-4 rounded-full overflow-hidden">
+                <img src={assets.testimony2} alt="testimony img" className="w-full h-full object-cover" />
+              </div>
+              <h2 className="text-lg font-semibold text-white">Jane Smith</h2>
+              <p className="text-sm text-gray-200">United Kingdom</p>
+              <p className="text-gray-100 text-sm">"The leadership and management course was transformative. I gained insights that are directly applicable to my role."</p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col items-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 mb-4 rounded-full overflow-hidden">
+                <img src={assets.testimony3} alt="testimony img" className="w-full h-full object-cover" />
+              </div>
+              <h2 className="text-lg font-semibold text-white">Ahmed Khan</h2>
+              <p className="text-sm text-gray-200">United Arab Emirates</p>
+              <p className="text-gray-100 text-sm">"A fantastic learning experience! The courses are practical, insightful, and well-structured."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       <Footer2 />
     </div>
   );

@@ -7,6 +7,9 @@ import ceo from '../Assets/ceo.jpg'
 import solo from './solo.jpg'
 import teamBg from './team-bg.jpg'
 import waitecclogo from './waitecclogo.png'
+import testimony1 from './testimony1.webp'
+import testimony2 from './testimony2.jpg'
+import testimony3 from './testimony3.jpg'
 
 const assets = {
     logo,
@@ -18,6 +21,9 @@ const assets = {
     solo,
     teamBg,
     waitecclogo,
+    testimony1,
+    testimony2,
+    testimony3
 }
 
 export default assets;
