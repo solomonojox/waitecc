@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import assets from '../Assets/assets';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
@@ -6,6 +6,10 @@ import Footer from '../Components/Footer';
 import { FaBrain, FaBullhorn, FaEnvelope, FaSearchDollar, FaVideo, FaPaintBrush, FaLaptopCode, FaChartLine, FaFileAlt } from "react-icons/fa";
 
 const Services = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    
     const services = [
         {
             icon: <FaBrain className="text-blue-500 text-6xl mb-4" />,

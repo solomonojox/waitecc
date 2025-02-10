@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import assets from '../Assets/assets';
@@ -9,6 +9,10 @@ import { MdOutlineAttachEmail, MdOutlinePhoneAndroid } from "react-icons/md";
 
 
 const ContactUs = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    
     return (
         <div className="">
             <div className="sticky top-0 z-50">

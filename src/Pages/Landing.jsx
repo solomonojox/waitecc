@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Footer2 from "../Components/Footer";
 import Header from "../Components/Navbar";
 import assets from "../Assets/assets";
 
 const LandingPage = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
   return (
     <div>
       <div className="sticky top-0 z-50">

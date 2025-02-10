@@ -1,9 +1,13 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import assets from '../Assets/assets';
 
 const Team = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div>
       <div className="sticky top-0 z-50">
@@ -30,7 +34,7 @@ const Team = () => {
               We are a team of visionary digital marketers, designers, and tech experts committed to growing your business.
             </p>
             <button className="bg-gradient-to-r from-yellow-500 to-orange-400 text-white px-8 py-3 rounded-md hover:scale-110 transition transform duration-300">
-              <a href="#contact">Let's Talk</a>
+              <a href="#team">Let's Talk</a>
             </button>
           </div>
         </section>
@@ -41,10 +45,10 @@ const Team = () => {
             <h2 className="text-4xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
               Meet the Team
             </h2>
-            <p className="mb-16 text-lg text-gray-600">
+            <p className="mb-16 text-lg text-gray-600 lg:px-[18%]">
               Our team is made up of SEO experts, content creators, developers, and brand strategists dedicated to helping your business grow.
             </p>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-10 lg:gap-20">
               <div className="text-center group transform hover:scale-105 transition-all duration-300">
                 <img
                   className="w-[300px] h-[300px] rounded-full mx-auto mb-4 object-cover shadow-xl border-4"
@@ -66,17 +70,6 @@ const Team = () => {
                   Solomon Akpas
                 </h3>
                 <p className="text-lg text-gray-500">Web Development Lead</p>
-              </div>
-              <div className="text-center group transform hover:scale-105 transition-all duration-300">
-                <img
-                  className="w-[300px] h-[300px] rounded-full mx-auto mb-4 object-cover shadow-xl border-4 "
-                  src=""
-                  alt="Soji Babatunde"
-                />
-                <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-teal-500">
-                  Soji Babatunde
-                </h3>
-                <p className="text-lg text-gray-500">Graphics and Video Editor</p>
               </div>
             </div>
           </div>
