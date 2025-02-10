@@ -56,7 +56,7 @@ const LandingPage = () => {
       </div>
 
       {/* Testimonials */}
-      <section className="py-16 md:px-8 bg-white">
+      <section className="py-16 px-6 md:px-8 bg-white">
         <div className="md:px-4">
           <h1 className="text-3xl font-semibold text-center">What people say</h1>
           <p className="text-center mb-8">Discover what our satisfied customers have to say about our services</p>
