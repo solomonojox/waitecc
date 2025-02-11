@@ -6,7 +6,7 @@ import assets from "../Assets/assets";
 
 const LandingPage = () => {
   useEffect(() => {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
   }, [])
   return (
     <div>
@@ -21,11 +21,18 @@ const LandingPage = () => {
 
             {/* Text Content */}
             <div className="lg:w-1/2 text-center lg:text-left">
+              {/* 
               <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
                 Elevate Your Brand with Cutting-Edge AI-Powered Digital Solutions
+              </h1> */}
+              <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
+                We Grow Your Brand's Revenue $$ with AI-Powered Digital Marketing Solutions
               </h1>
-              <p className="text-lg mb-8">
+              {/* <p className="text-lg mb-8">
                 At <span className="font-semibold">Waitecc</span>, we blend human creativity with AI-driven digital tools to deliver high-performance marketing strategies that grow your brand, increase engagement, and drive conversions. Whether it's SEO optimization, content marketing, brand management, or social media strategy, we help businesses stay ahead in the digital age.
+              </p> */}
+              <p className="text-lg mb-8">
+              Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
               </p>
               <a
                 href="mailto:waiteccng@outlook.com"
