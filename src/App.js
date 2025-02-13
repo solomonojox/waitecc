@@ -8,6 +8,7 @@ import ContactUs from './Pages/ContactUs';
 import Pricing from './Pages/Pricing';
 
 import Team from './Pages/Team.jsx'
+import ServiceDetailsPage from './Pages/ServiceDetailsPage.jsx';
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:servce" element={<ServiceDetailsPage />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/team" element={<Team/>}/>

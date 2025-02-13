@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import assets from '../Assets/assets';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
@@ -6,6 +7,7 @@ import Footer from '../Components/Footer';
 import { FaBrain, FaBullhorn, FaEnvelope, FaSearchDollar, FaVideo, FaPaintBrush, FaLaptopCode, FaChartLine, FaFileAlt } from "react-icons/fa";
 
 const Services = () => {
+    const navigate = useNavigate()
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -14,47 +16,56 @@ const Services = () => {
         {
             icon: <FaBrain className="text-blue-500 text-6xl mb-4" />,
             title: "AI-Powered Digital & Content Marketing",
-            description: "Leverage the power of AI-driven insights to automate, personalize, and optimize your digital marketing campaigns for maximum impact."
+            description: "Leverage the power of AI-driven insights to automate, personalize, and optimize your digital marketing campaigns for maximum impact.",
+            furtherInfo: "This is a test1"
         },
         {
             icon: <FaBullhorn className="text-orange-500 text-6xl mb-4" />,
             title: "Brand & Social Media Management",
-            description: "From content curation to community engagement, we manage your social media presence with data-backed strategies to enhance brand visibility."
+            description: "From content curation to community engagement, we manage your social media presence with data-backed strategies to enhance brand visibility.",
+            furtherInfo: "This is a test2"
         },
         {
             icon: <FaEnvelope className="text-red-500 text-6xl mb-4" />,
             title: "Email Marketing",
-            description: "Boost customer retention and sales with personalized, AI-optimized email campaigns that drive engagement."
+            description: "Boost customer retention and sales with personalized, AI-optimized email campaigns that drive engagement.",
+            furtherInfo: "This is a test3"
         },
         {
             icon: <FaSearchDollar className="text-green-500 text-6xl mb-4" />,
             title: "SEO/SEM Marketing",
-            description: "Rank higher and attract organic traffic with search engine optimization (SEO) and pay-per-click (PPC) strategies tailored to your business."
+            description: "Rank higher and attract organic traffic with search engine optimization (SEO) and pay-per-click (PPC) strategies tailored to your business.",
+            furtherInfo: "This is a test4"
         },
         {
             icon: <FaVideo className="text-purple-500 text-6xl mb-4" />,
             title: "Video Production",
-            description: "Engage your audience with high-quality, professional video content that tells your brand’s story effectively."
+            description: "Engage your audience with high-quality, professional video content that tells your brand’s story effectively.",
+            furtherInfo: "This is a test5"
         },
         {
             icon: <FaPaintBrush className="text-pink-500 text-6xl mb-4" />,
             title: "Content Creation & Graphic Design",
-            description: "Captivate your audience with AI-enhanced, SEO-rich content and visually compelling designs that align with your brand identity."
+            description: "Captivate your audience with AI-enhanced, SEO-rich content and visually compelling designs that align with your brand identity.",
+            furtherInfo: "This is a test6"
         },
         {
             icon: <FaLaptopCode className="text-indigo-500 text-6xl mb-4" />,
             title: "Website & Mobile App Development",
-            description: "Get a fully responsive, SEO-optimized website or mobile app designed to convert visitors into loyal customers."
+            description: "Get a fully responsive, SEO-optimized website or mobile app designed to convert visitors into loyal customers.",
+            furtherInfo: "This is a test7"
         },
         {
             icon: <FaChartLine className="text-teal-500 text-6xl mb-4" />,
             title: "Market Research",
-            description: "Make data-driven business decisions with in-depth market insights, competitor analysis, and consumer behavior studies."
+            description: "Make data-driven business decisions with in-depth market insights, competitor analysis, and consumer behavior studies.",
+            furtherInfo: "This is a test8"
         },
         {
             icon: <FaFileAlt className="text-gray-500 text-6xl mb-4" />,
             title: "Copywriting & Technical Writing",
-            description: "From persuasive sales copy to in-depth technical documentation, we craft engaging, high-converting written content tailored to your audience."
+            description: "From persuasive sales copy to in-depth technical documentation, we craft engaging, high-converting written content tailored to your audience.",
+            furtherInfo: "This is a test9"
         }
     ];
 
@@ -90,7 +101,7 @@ const Services = () => {
                                 {service.icon}
                                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                                 <p className="text-gray-600">{service.description}</p>
-                                <button className='bg-primary text-white py-2 mt-2'>See more</button>
+                                <button className='text-primary font-bold hover:text-hoverPrimary mt-2' onClick={() => navigate(`/services/${service.title}`, {state: service})}>See more...</button>
                             </div>
                         </div>
                     ))}
