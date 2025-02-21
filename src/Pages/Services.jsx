@@ -8,10 +8,11 @@ import { FaBrain, FaBullhorn, FaEnvelope, FaSearchDollar, FaVideo, FaPaintBrush,
 
 const Services = () => {
     const navigate = useNavigate()
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-    
+
     const services = [
         {
             icon: <FaBrain className="text-blue-500 text-6xl mb-4" />,
@@ -101,7 +102,13 @@ const Services = () => {
                                 {service.icon}
                                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                                 <p className="text-gray-600">{service.description}</p>
-                                <button className='text-primary font-bold hover:text-hoverPrimary mt-2' onClick={() => navigate(`/services/${service.title}`, {state: service})}>See more...</button>
+                                <button className='text-primary font-bold hover:text-hoverPrimary mt-2' onClick={() => navigate(`/services/${encodeURIComponent(service.title)}`, {
+                                    state: {
+                                        title: service.title,
+                                        description: service.description,
+                                        furtherInfo: service.furtherInfo
+                                    }
+                                })}>See more...</button>
                             </div>
                         </div>
                     ))}
