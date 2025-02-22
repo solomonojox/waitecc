@@ -1,13 +1,19 @@
-import { useLocation } from "react-router-dom"
+// import { useLocation } from "react-router-dom"
 import Navbar from "../Components/Navbar"
 
-import { FaWhatsapp } from "react-icons/fa6";
-import { MdPayments } from "react-icons/md";
+
+// import { MdPayments } from "react-icons/md";
 import AiDigitalContentMarketing from "../Pricing/AiDigitalContentMarketing";
+import Footer from "../Components/Footer";
+import WhatsApp from "../Components/WhatsApp";
+import assets from "../Assets/assets";
+import { useEffect } from "react";
 
 const Ai = () => {
-  const location = useLocation()
-  const info = location.state
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <div>
       <div className="sticky top-0 z-50">
@@ -17,14 +23,18 @@ const Ai = () => {
       <div className="bg-gray-100 text-gray-900 flex items-center justify-center">
         <div className="w-full p-6">
           <div className="lg:p-8">
-            <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">
-              Harness AI-Driven Marketing
-            </h1>
-            <p className="text-lg text-center mb-6">
-              Personalize, automate, and optimize campaigns, increasing conversions by up to
-              <span className="font-semibold text-green-600"> 50% </span> and engagement by
-              <span className="font-semibold text-green-600"> 80% </span>. Our data-backed approach ensures that your brand reaches the right audience at the right time.
-            </p>
+            <div style={{ backgroundImage: `url(${assets.ai})`, backgroundPosition: 'center', backgroundSize: 'cover' }} className="h-[350px] flex justify-center items-center">
+              <div className="bg-black bg-opacity-50 p-6 rounded-lg">
+                <h1 className="text-3xl font-bold text-center text-white mb-6">
+                  Harness AI-Driven Marketing
+                </h1>
+                <p className="text-lg text-center mb-6 text-gray-200">
+                  Personalize, automate, and optimize campaigns, increasing conversions by up to
+                  <span className="font-semibold text-green-600"> 50% </span> and engagement by
+                  <span className="font-semibold text-green-600"> 80% </span>. Our data-backed approach ensures that your brand reaches the right audience at the right time.
+                </p>
+              </div>
+            </div>
 
             <div className="mt-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Features & Measurable Results:</h2>
@@ -59,7 +69,11 @@ const Ai = () => {
         </div>
       </div>
 
-      <AiDigitalContentMarketing/>
+      <AiDigitalContentMarketing />
+
+      <WhatsApp />
+
+      <Footer />
     </div>
   )
 }

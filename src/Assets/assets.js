@@ -10,6 +10,15 @@ import waitecclogo from './waitecclogo.png'
 import testimony1 from './testimony1.webp'
 import testimony2 from './testimony2.jpg'
 import testimony3 from './testimony3.jpg'
+import sm from './sm.jpg'
+import email from './email.jpg'
+import ai from './ai.jpg'
+import content from './content.jpg'
+import seo from './seo.jpg'
+import video from './video.jpg'
+import web from './web.jpg'
+import writing from './writing.jpg'
+import research from './research.jpg'
 
 const assets = {
     logo,
@@ -23,7 +32,16 @@ const assets = {
     waitecclogo,
     testimony1,
     testimony2,
-    testimony3
+    testimony3,
+    sm,
+    email,
+    ai,
+    content,
+    seo,
+    video,
+    web,
+    writing,
+    research,
 }
 
 export default assets;
