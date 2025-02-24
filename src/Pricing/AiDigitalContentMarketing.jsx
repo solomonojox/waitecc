@@ -35,12 +35,12 @@ const AiDigitalContentMarketing = () => {
             <h1 className='text-[3vmax] md:text-[2vmax] font-semibold'>AI-Powered Digital & Content Marketing</h1>
             <div className="flex justify-center flex-wrap gap-4 py-8">
                 {pricingPlans.map((plan, index) => (
-                    <motion.div key={index} whileHover={{ scale: 1.05 }} className={`rounded-md shadow-md w-[300px] overflow-hidden hover:border-blue-500 bg-white`}>
+                    <motion.div key={index} whileHover={{ scale: 1.05 }} className={`rounded-md shadow-md w-[280px] overflow-hidden hover:border-blue-500 bg-white`}>
                         <div className={`${plan.bgColor} p-6 text-center`}>
                             <h2 className="text-2xl font-semibold">{plan.title}</h2>
                         </div>
-                        <div className="bg-white p-6">
-                            <p className="text-3xl font-bold text-blue-600 mb-6">
+                        <div className="bg-white p-4">
+                            <p className="text-2xl font-bold text-blue-600 mb-6">
                                 {typeof plan.price === "number" ? `${currency}${formatAmount(plan.price * conversionRate)}` : plan.price}
                                 <span className="text-lg font-normal">{plan.duration}</span>
                             </p>

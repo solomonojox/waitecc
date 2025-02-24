@@ -77,6 +77,12 @@ const Navbar = () => {
           >
             Contact
           </Link>
+          <Link
+            to="#"
+            className="text-gray-800 font-medium hover:text-primary"
+          >
+            Blog
+          </Link>
         </div>
       </div>
 
