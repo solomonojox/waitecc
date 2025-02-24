@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaCircleCheck } from "react-icons/fa6";
 
 const plans = [
     {
         title: "Basic Plan",
-        price: "₦150,000",
+        price: 150000,
         duration: "/month",
         features: [
             "15 custom designs per month (graphics and videos)",
@@ -17,7 +17,7 @@ const plans = [
     },
     {
         title: "Standard Plan",
-        price: "₦500,000",
+        price: 500000,
         duration: "/month",
         features: [
             "Everything in Basic (graphics, videos, Infographics, carousels, articles)",
@@ -30,10 +30,10 @@ const plans = [
     },
     {
         title: "Premium Plan",
-        price: "₦1,200,000",
+        price: 1200000,
         duration: "/month",
         features: [
-            "30 graphics and video per month(graphics, videos, carousels, Infographics, motion graphics, articles)",
+            "30 graphics and video per month (graphics, videos, carousels, Infographics, motion graphics, articles)",
             "Premium content creation",
             "Advanced visual effects & animations",
             "Personalized branding strategy"
@@ -49,7 +49,6 @@ const plans = [
             "Fully customized design packages",
             "Dedicated graphic designer support",
             "Specialized branding elements & creative direction"
-
         ],
         bgColor: "bg-purple-100",
         buttonColor: "bg-purple-600 hover:bg-purple-700",
@@ -57,6 +56,26 @@ const plans = [
 ];
 
 const ContentCreationGraphicDesign = () => {
+    const [currency, setCurrency] = useState("₦");
+    const [conversionRate, setConversionRate] = useState(1);
+
+    const formatAmount = (amt) =>
+        amt
+            .toFixed(2)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    useEffect(() => {
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (timeZone.includes("Europe")) {
+            setCurrency("£");
+            setConversionRate(1 / 800);
+        } else if (timeZone !== "Africa/Lagos") {
+            setCurrency("$");
+            setConversionRate(1 / 800);
+        }
+    }, []);
+
     return (
         <div className="flex flex-col items-center flex-wrap gap-4 py-8 bg-green-50">
             <h1 className="text-[3vmax] md:text-[2vmax] font-semibold">
@@ -74,7 +93,7 @@ const ContentCreationGraphicDesign = () => {
                         </div>
                         <div className="bg-white p-6">
                             <p className="text-3xl font-bold text-blue-600 mb-6">
-                                {plan.price}
+                                {typeof plan.price === "number" ? `${currency}${formatAmount(plan.price * conversionRate)}` : plan.price}
                                 <span className="text-lg font-normal">{plan.duration}</span>
                             </p>
                             <ul className="text-left space-y-2 mb-6">

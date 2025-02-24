@@ -73,27 +73,28 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
             <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col items-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 mb-4 rounded-full overflow-hidden">
-                <img src={assets.testimony1} alt="testimony img" className="w-full h-full object-cover" />
+              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
+                <img src={assets.kenedy} alt="testimony img" className="w-full h-full object-cover" />
               </div>
-              <h2 className="text-lg font-semibold text-white">John Doe</h2>
-              <p className="text-sm text-gray-200">United States</p>
-              <p className="text-gray-100 text-sm">"This course has significantly improved my skills and provided me with tools to excel in my career. Highly recommended!"</p>
+              <h2 className="text-lg font-semibold text-white">Kennedy</h2>
+              <p className="text-sm text-gray-200 font-medium">Brand: Ken Signature</p>
+              <p className="text-gray-100 text-sm">"I’m really happy with the service. Everything went smoothly from start to finish. The team knows their stuff and really puts in the effort to deliver great results. Always there when needed. I definitely recommend their services anytime"</p>
             </div>
 
             {/* Testimonial 2 */}
             <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col text-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 mb-4 rounded-full overflow-hidden">
+              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
                 <img src={assets.testimony2} alt="testimony img" className="w-full h-full object-cover" />
               </div>
-              <h2 className="text-lg font-semibold text-white">Jane Smith</h2>
-              <p className="text-sm text-gray-200">United Kingdom</p>
-              <p className="text-gray-100 text-sm">"The leadership and management course was transformative. I gained insights that are directly applicable to my role."</p>
+              <h2 className="text-lg font-semibold text-white">Isi</h2>
+              <p className="text-sm text-gray-200 font-medium">Brand: Trisley Pharmacy and stores</p>
+              <p className="text-gray-100 text-sm">"I'm blown away by the exceptional work you did on my website! From concept to launch, you were professional, responsive, and dedicated to delivering a top-notch product. The pricing is highly competitive yet with so much human face. 
+              Your expertise and attention to detail and feedback are evident in every aspect of the site. I couldn't be happier with the final result."</p>
             </div>
 
             {/* Testimonial 3 */}
             <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col items-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 mb-4 rounded-full overflow-hidden">
+              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
                 <img src={assets.testimony3} alt="testimony img" className="w-full h-full object-cover" />
               </div>
               <h2 className="text-lg font-semibold text-white">Ahmed Khan</h2>

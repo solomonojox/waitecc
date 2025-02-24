@@ -19,6 +19,7 @@ import video from './video.jpg'
 import web from './web.jpg'
 import writing from './writing.jpg'
 import research from './research.jpg'
+import kenedy from './kenedy.jpg'
 
 const assets = {
     logo,
@@ -42,6 +43,7 @@ const assets = {
     web,
     writing,
     research,
+    kenedy,
 }
 
 export default assets;

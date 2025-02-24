@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import { FaCircleCheck } from "react-icons/fa6";
 
 const pricingPlans = [
     {
         title: "Basic Plan",
-        price: "₦650,000",
+        price: 650000,
         duration: "/month",
         features: [
             "On-page SEO optimization",
@@ -18,7 +18,7 @@ const pricingPlans = [
     },
     {
         title: "Standard Plan",
-        price: "₦1,200,000",
+        price: 1200000,
         duration: "/month",
         features: [
             "Everything in Basic",
@@ -32,7 +32,7 @@ const pricingPlans = [
     },
     {
         title: "Premium Plan",
-        price: "₦2,000,000",
+        price: 2000000,
         duration: "/month",
         features: [
             "Everything in Standard",
@@ -48,6 +48,26 @@ const pricingPlans = [
 ];
 
 const SEOSEMMarketingPricing = () => {
+    const [currency, setCurrency] = useState("₦");
+    const [conversionRate, setConversionRate] = useState(1);
+
+    const formatAmount = (amt) =>
+        amt
+            .toFixed(2)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    useEffect(() => {
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (timeZone.includes("Europe")) {
+            setCurrency("£");
+            setConversionRate(1 / 800);
+        } else if (timeZone !== "Africa/Lagos") {
+            setCurrency("$");
+            setConversionRate(1 / 800);
+        }
+    }, []);
+
     return (
         <div className='flex flex-col items-center flex-wrap gap-4 py-8'>
             <h1 className='text-[3vmax] md:text-[2vmax] font-semibold'>SEO & SEM Marketing Pricing</h1>
@@ -63,7 +83,7 @@ const SEOSEMMarketingPricing = () => {
                         </div>
                         <div className="bg-white p-6">
                             <p className="text-3xl font-bold text-blue-600 mb-6">
-                                {plan.price}
+                                {typeof plan.price === "number" ? `${currency}${formatAmount(plan.price * conversionRate)}` : plan.price}
                                 <span className="text-lg font-normal">{plan.duration}</span>
                             </p>
                             <ul className="text-left space-y-2 mb-6">

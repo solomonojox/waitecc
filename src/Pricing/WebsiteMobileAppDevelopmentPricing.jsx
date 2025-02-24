@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import { FaCircleCheck } from "react-icons/fa6";
 
 const pricingPlans = [
     {
         title: "Basic Website",
-        price: "₦250,000",
+        price: 250000,
         duration: "(1-3 Pages)",
         features: [
             "Custom design tailored to your brand",
@@ -21,7 +21,7 @@ const pricingPlans = [
     },
     {
         title: "Standard Website",
-        price: "₦450,000",
+        price: 450000,
         duration: "(5-10 Pages with Basic SEO)",
         features: [
             "Custom website design and layout based on your branding",
@@ -39,7 +39,7 @@ const pricingPlans = [
     },
     {
         title: "E-commerce Website",
-        price: "₦2,500,000",
+        price: 2500000,
         duration: "(Full Store Setup & Payment Integration)",
         features: [
             "Fully customized e-commerce store design",
@@ -60,7 +60,7 @@ const pricingPlans = [
     },
     {
         title: "Mobile App",
-        price: "Starting at ₦2,500,000",
+        price: "Contact us for a tailored solution",
         duration: "",
         features: [
             "Native mobile app development (for iOS and/or Android)",
@@ -80,22 +80,38 @@ const pricingPlans = [
 ];
 
 const WebsiteMobileAppDevelopmentPricing = () => {
+    const [currency, setCurrency] = useState("₦");
+    const [conversionRate, setConversionRate] = useState(1);
+
+    const formatAmount = (amt) =>
+        amt
+            .toFixed(2)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+    useEffect(() => {
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (timeZone.includes("Europe")) {
+            setCurrency("£");
+            setConversionRate(1 / 800);
+        } else if (timeZone !== "Africa/Lagos") {
+            setCurrency("$");
+            setConversionRate(1 / 800);
+        }
+    }, []);
+
     return (
         <div className='flex flex-col items-center flex-wrap gap-4 py-8'>
             <h1 className='text-[3vmax] md:text-[2vmax] font-semibold'>Website & Mobile App Development Pricing</h1>
             <div className="flex justify-center flex-wrap gap-4 py-8">
                 {pricingPlans.map((plan, index) => (
-                    <motion.div
-                        key={index}
-                        whileHover={{ scale: 1.05 }}
-                        className={`rounded-md shadow-md w-[300px] overflow-hidden hover:border-blue-500 bg-white`}
-                    >
+                    <motion.div key={index} whileHover={{ scale: 1.05 }} className={`rounded-md shadow-md w-[300px] overflow-hidden hover:border-blue-500 bg-white`}>
                         <div className={`${plan.bgColor} p-6 text-center`}>
                             <h2 className="text-2xl font-semibold">{plan.title}</h2>
                         </div>
                         <div className="bg-white p-6">
                             <p className="text-3xl font-bold text-blue-600 mb-6">
-                                {plan.price}
+                                {typeof plan.price === "number" ? `${currency}${formatAmount(plan.price * conversionRate)}` : plan.price}
                                 <span className="text-lg font-normal"> {plan.duration}</span>
                             </p>
                             <ul className="text-left space-y-2 mb-6">
@@ -106,7 +122,7 @@ const WebsiteMobileAppDevelopmentPricing = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className={`${plan.buttonColor} text-white px-6 py-2 rounded-lg transition-colors`}> 
+                            <button className={`${plan.buttonColor} text-white px-6 py-2 rounded-lg transition-colors`}>
                                 {plan.title === "Mobile App" ? "Contact Us" : "Choose Plan"}
                             </button>
                         </div>
@@ -114,7 +130,7 @@ const WebsiteMobileAppDevelopmentPricing = () => {
                 ))}
             </div>
         </div>
-    )
+    );
 }
 
 export default WebsiteMobileAppDevelopmentPricing;
