@@ -1,97 +1,129 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaCircleCheck } from "react-icons/fa6";
 
 const pricingPlans = [
-    {
-        title: "15-Second Video",
-        price: "₦20,000",
-        duration: "",
-        features: [
-            "High-quality short-form video",
-            "Basic animations & transitions",
-            "Standard background music",
-            "1 revision included"
-        ],
-        bgColor: "bg-blue-100",
-        buttonColor: "bg-blue-600 hover:bg-blue-700",
-    },
-    {
-        title: "20-Second Video",
-        price: "₦25,000",
-        duration: "",
-        features: [
-            "Everything in 15-second video",
-            "Custom branding elements",
-            "2 revisions included"
-        ],
-        bgColor: "bg-blue-100",
-        buttonColor: "bg-blue-600 hover:bg-blue-700",
-    },
-    {
-        title: "30-Second Video",
-        price: "₦30,000",
-        duration: "",
-        features: [
-            "Everything in 20-second video",
-            "Professional voice-over (optional)",
-            "Advanced editing & effects",
-            "3 revisions included"
-        ],
-        bgColor: "bg-blue-100",
-        buttonColor: "bg-blue-600 hover:bg-blue-700",
-    },
-    {
-        title: "1-Minute Video",
-        price: "₦45,000",
-        duration: "",
-        features: [
-            "Everything in 30-second video",
-            "Scriptwriting assistance",
-            "Multiple scene transitions",
-            "5 revisions included"
-        ],
-        bgColor: "bg-green-100",
-        buttonColor: "bg-green-600 hover:bg-green-700",
-    },
+  {
+    title: "15-Second Video",
+    price: 20000,
+    duration: "",
+    features: [
+      "High-quality short-form video",
+      "Basic animations & transitions",
+      "Standard background music",
+      "1 revision included",
+    ],
+    bgColor: "bg-blue-100",
+    buttonColor: "bg-blue-600 hover:bg-blue-700",
+  },
+  {
+    title: "20-Second Video",
+    price: 25000,
+    duration: "",
+    features: [
+      "Everything in 15-second video",
+      "Custom branding elements",
+      "2 revisions included",
+    ],
+    bgColor: "bg-blue-100",
+    buttonColor: "bg-blue-600 hover:bg-blue-700",
+  },
+  {
+    title: "30-Second Video",
+    price: 30000,
+    duration: "",
+    features: [
+      "Everything in 20-second video",
+      "Professional voice-over (optional)",
+      "Advanced editing & effects",
+      "3 revisions included",
+    ],
+    bgColor: "bg-blue-100",
+    buttonColor: "bg-blue-600 hover:bg-blue-700",
+  },
+  {
+    title: "1-Minute Video",
+    price: 45000,
+    duration: "",
+    features: [
+      "Everything in 30-second video",
+      "Scriptwriting assistance",
+      "Multiple scene transitions",
+      "5 revisions included",
+    ],
+    bgColor: "bg-green-100",
+    buttonColor: "bg-green-600 hover:bg-green-700",
+  },
 ];
 
 const VideoProductionPricing = () => {
-    return (
-        <div className='flex flex-col items-center flex-wrap gap-4 py-8'>
-            <h1 className='text-[3vmax] md:text-[2vmax] font-semibold'>Video Production Pricing</h1>
-            <div className="flex justify-center flex-wrap gap-4 py-8">
-                {pricingPlans.map((plan, index) => (
-                    <motion.div
-                        key={index}
-                        whileHover={{ scale: 1.05 }}
-                        className={`rounded-md shadow-md w-[300px] overflow-hidden hover:border-blue-500 bg-white`}
-                    >
-                        <div className={`${plan.bgColor} p-6 text-center`}>
-                            <h2 className="text-2xl font-semibold">{plan.title}</h2>
-                        </div>
-                        <div className="bg-white p-6">
-                            <p className="text-3xl font-bold text-blue-600 mb-6">
-                                {plan.price}
-                                <span className="text-lg font-normal">{plan.duration}</span>
-                            </p>
-                            <ul className="text-left space-y-2 mb-6">
-                                {plan.features.map((feature, idx) => (
-                                    <li key={idx} className="flex items-center">
-                                        <FaCircleCheck className="mr-2 text-blue-600 w-[10%]" />
-                                        <span className='w-[90%]'>{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                            <button className={`${plan.buttonColor} text-white px-6 py-2 rounded-lg transition-colors`}>
-                                Choose Plan
-                            </button>
-                        </div>
-                    </motion.div>
-                ))}
+  const [currency, setCurrency] = useState("₦");
+  const [exchangeRate, setExchangeRate] = useState(1);
+
+  useEffect(() => {
+    const fetchCountry = async () => {
+      try {
+        const response = await fetch("https://ipapi.co/json/");
+        const data = await response.json();
+        const country = data.country_name;
+        
+        if (country === "Nigeria") {
+          setCurrency("₦");
+          setExchangeRate(1);
+        } else if (["United Kingdom", "Germany", "France", "Spain", "Italy", "Netherlands", "Belgium"].includes(country)) {
+          setCurrency("£");
+          setExchangeRate(1 / 800);
+        } else {
+          setCurrency("$");
+          setExchangeRate(1 / 800);
+        }
+      } catch (error) {
+        console.error("Error fetching location:", error);
+      }
+    };
+
+    fetchCountry();
+  }, []);
+
+  return (
+    <div className="flex flex-col items-center flex-wrap gap-4 py-8">
+      <h1 className="text-[3vmax] md:text-[2vmax] font-semibold">
+        Video Production Pricing
+      </h1>
+      <div className="flex justify-center flex-wrap gap-4 py-8">
+        {pricingPlans.map((plan, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }}
+            className={`rounded-md shadow-md w-[300px] overflow-hidden hover:border-blue-500 bg-white`}
+          >
+            <div className={`${plan.bgColor} p-6 text-center`}>
+              <h2 className="text-2xl font-semibold">{plan.title}</h2>
             </div>
-        </div>
-    )
-}
+            <div className="bg-white p-6">
+              <p className="text-3xl font-bold text-blue-600 mb-6">
+                {currency} {(plan.price * exchangeRate).toFixed(2)}
+                <span className="text-lg font-normal">{plan.duration}</span>
+              </p>
+              <ul className="text-left space-y-2 mb-6">
+                {plan.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center">
+                    <FaCircleCheck className="mr-2 text-blue-600 w-[10%]" />
+                    <span className="w-[90%]">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <button
+                className={`${plan.buttonColor} text-white px-6 py-2 rounded-lg transition-colors`}
+              >
+                Choose Plan
+              </button>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default VideoProductionPricing;
