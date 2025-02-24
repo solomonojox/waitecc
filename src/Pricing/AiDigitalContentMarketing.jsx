@@ -13,6 +13,12 @@ const AiDigitalContentMarketing = () => {
     const [currency, setCurrency] = useState("₦");
     const [conversionRate, setConversionRate] = useState(1);
 
+    const formatAmount = (amt) =>
+        amt
+            .toFixed(2)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
     useEffect(() => {
         const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
         if (timeZone.includes("Europe")) {
@@ -35,7 +41,7 @@ const AiDigitalContentMarketing = () => {
                         </div>
                         <div className="bg-white p-6">
                             <p className="text-3xl font-bold text-blue-600 mb-6">
-                                {typeof plan.price === "number" ? `${currency}${(plan.price * conversionRate).toFixed(2)}` : plan.price}
+                                {typeof plan.price === "number" ? `${currency}${formatAmount(plan.price * conversionRate)}` : plan.price}
                                 <span className="text-lg font-normal">{plan.duration}</span>
                             </p>
                             <ul className="text-left space-y-2 mb-6">
