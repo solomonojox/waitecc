@@ -5,7 +5,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 const plans = [
     {
         title: "Basic Plan",
-        price: 250000,
+        price: 350000,
         duration: "/month",
         features: [
             "Content scheduling & engagement monitoring",

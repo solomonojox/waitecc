@@ -59,12 +59,12 @@ const Navbar = () => {
           >
             Services
           </Link>
-          <Link
+          {/* <Link
             to="/pricing"
             className="text-gray-800 font-medium hover:text-primary"
           >
             Pricing
-          </Link>
+          </Link> */}
           <Link
             to="/team"
             className="text-gray-800 font-medium hover:text-primary"

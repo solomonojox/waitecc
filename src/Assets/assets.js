@@ -19,7 +19,17 @@ import video from './video.jpg'
 import web from './web.jpg'
 import writing from './writing.jpg'
 import research from './research.jpg'
-import kenedy from './kenedy.jpg'
+import kenedy from './kenedy.jpg';
+import albert from './albert.jpg';
+import brass from './brass.png';
+import casiva from './cavisa.jpg';
+import eko from './eko.png';
+import hotel from './hotel.jpg';
+import landmall from './landmall.svg';
+import lekki from './lekki.jpg';
+import real from './real.png';
+import sterling from './sterling.PNG'
+import uba from './uba.gif'
 
 const assets = {
     logo,
@@ -44,6 +54,16 @@ const assets = {
     writing,
     research,
     kenedy,
+    albert,
+    brass,
+    casiva,
+    eko,
+    hotel,
+    landmall,
+    lekki,
+    real,
+    sterling,
+    uba,
 }
 
 export default assets;

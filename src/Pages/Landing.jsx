@@ -5,9 +5,9 @@ import Header from "../Components/Navbar";
 import assets from "../Assets/assets";
 
 const LandingPage = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [])
   return (
     <div>
       <div className="sticky top-0 z-50">
@@ -32,7 +32,7 @@ const LandingPage = () => {
                 At <span className="font-semibold">Waitecc</span>, we blend human creativity with AI-driven digital tools to deliver high-performance marketing strategies that grow your brand, increase engagement, and drive conversions. Whether it's SEO optimization, content marketing, brand management, or social media strategy, we help businesses stay ahead in the digital age.
               </p> */}
               <p className="text-lg mb-8">
-              Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
+                Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
               </p>
               <a
                 href="mailto:waiteccng@outlook.com"
@@ -88,8 +88,8 @@ const LandingPage = () => {
               </div>
               <h2 className="text-lg font-semibold text-white">Isi</h2>
               <p className="text-sm text-gray-200 font-medium">Brand: Trisley Pharmacy and stores</p>
-              <p className="text-gray-100 text-sm">"I'm blown away by the exceptional work you did on my website! From concept to launch, you were professional, responsive, and dedicated to delivering a top-notch product. The pricing is highly competitive yet with so much human face. 
-              Your expertise and attention to detail and feedback are evident in every aspect of the site. I couldn't be happier with the final result."</p>
+              <p className="text-gray-100 text-sm">"I'm blown away by the exceptional work you did on my website! From concept to launch, you were professional, responsive, and dedicated to delivering a top-notch product. The pricing is highly competitive yet with so much human face.
+                Your expertise and attention to detail and feedback are evident in every aspect of the site. I couldn't be happier with the final result."</p>
             </div>
 
             {/* Testimonial 3 */}
@@ -105,6 +105,41 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Client */}
+      <div className="bg-gray-50 py-36 px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Esteemed Clients</h2>
+          <p className="text-lg text-gray-400 opacity-90 mb-12">
+            Trusted by companies across various industries to deliver excellence.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.albert} alt="Client 1 Logo" className="w-20 h-20 object-contain" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.brass} alt="Client 2 Logo" className="w-30 h-20 object-contain" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.casiva} alt="Client 3 Logo" className="w-[135px] h-20 object-contain" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.eko} alt="Client 4 Logo" className="w-[135px] h-20 object-contain" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.uba} alt="Client 5 Logo" className="w-[135px] h-20 object-cover" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.landmall} alt="Client 6 Logo" className="w-[110px] h-20 object-contain" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.lekki} alt="Client 7 Logo" className="w-[165px] h-20 object-cover" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.real} alt="Client 8 Logo" className="w-20 h-20 object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Footer2 />
     </div>
