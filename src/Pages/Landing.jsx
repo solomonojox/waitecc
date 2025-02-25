@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Footer2 from "../Components/Footer";
 import Header from "../Components/Navbar";
 import assets from "../Assets/assets";
+import WhyChooseUs from "./WhyChooseUs";
+import ServicesPage from "./ServicesPage";
 
 const LandingPage = () => {
   // useEffect(() => {
@@ -64,6 +66,10 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      <WhyChooseUs/>
+
+      <ServicesPage/>
 
       {/* Testimonials */}
       <section className="py-16 px-6 md:px-8 bg-white">
