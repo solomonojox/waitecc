@@ -67,52 +67,12 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <WhyChooseUs/>
+      <WhyChooseUs />
 
-      <ServicesPage/>
-
-      {/* Testimonials */}
-      <section className="py-16 px-6 md:px-8 bg-white">
-        <div className="md:px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6 text-center">What people say</h1>
-          <p className="text-lg text-gray-400 opacity-90 mb-12 text-center">Discover what our satisfied customers have to say about our services</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
-            <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col items-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
-                <img src={assets.kenedy} alt="testimony img" className="w-full h-full object-cover" />
-              </div>
-              <h2 className="text-lg font-semibold text-white">Kennedy</h2>
-              <p className="text-sm text-gray-200 font-medium">Brand: Ken Signature</p>
-              <p className="text-gray-100 text-sm">"I’m really happy with the service. Everything went smoothly from start to finish. The team knows their stuff and really puts in the effort to deliver great results. Always there when needed. I definitely recommend their services anytime"</p>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col text-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
-                <img src={assets.testimony2} alt="testimony img" className="w-full h-full object-cover" />
-              </div>
-              <h2 className="text-lg font-semibold text-white">Isi</h2>
-              <p className="text-sm text-gray-200 font-medium">Brand: Trisley Pharmacy and stores</p>
-              <p className="text-gray-100 text-sm">"I'm blown away by the exceptional work you did on my website! From concept to launch, you were professional, responsive, and dedicated to delivering a top-notch product. The pricing is highly competitive yet with so much human face.
-                Your expertise and attention to detail and feedback are evident in every aspect of the site. I couldn't be happier with the final result."</p>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col items-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
-                <img src={assets.testimony3} alt="testimony img" className="w-full h-full object-cover" />
-              </div>
-              <h2 className="text-lg font-semibold text-white">Ahmed Khan</h2>
-              <p className="text-sm text-gray-200">United Arab Emirates</p>
-              <p className="text-gray-100 text-sm">"A fantastic learning experience! The courses are practical, insightful, and well-structured."</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServicesPage />
 
       {/* Client */}
-      <div className="bg-gray-50 py-36 px-8">
+      <div className="bg-gray-50 py-16 lg:py-36 px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Brands our team has worked with</h2>
           <p className="text-lg text-gray-400 opacity-90 mb-12">
@@ -146,6 +106,46 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Testimonials */}
+      <section className="py-16 px-6 md:px-8 bg-white">
+        <div className="md:px-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6 text-center">What people say</h1>
+          <p className="text-lg text-gray-400 opacity-90 mb-12 text-center">Discover what our satisfied customers have to say about our services</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col items-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
+                <img src={assets.kenedy} alt="testimony img" className="w-full h-full object-cover" />
+              </div>
+              <h2 className="text-xl font-serif font-semibold text-white">Kennedy</h2>
+              <p className="text-lg font-serif text-gray-200 font-medium">Ken Signature</p>
+              <p className="text-gray-100 text-sm">"I’m really happy with the service. Everything went smoothly from start to finish. The team knows their stuff and really puts in the effort to deliver great results. Always there when needed. I definitely recommend their services anytime"</p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col text-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
+                <img src={assets.testimony2} alt="testimony img" className="w-full h-full object-cover" />
+              </div>
+              <h2 className="text-xl font-serif font-semibold text-white">Isi</h2>
+              <p className="text-lg font-serif text-gray-200 font-medium">Trisley Pharmacy and stores</p>
+              <p className="text-gray-100 text-sm">"I'm blown away by the exceptional work you did on my website! From concept to launch, you were professional, responsive, and dedicated to delivering a top-notch product. The pricing is highly competitive yet with so much human face.
+                Your expertise and attention to detail and feedback are evident in every aspect of the site. I couldn't be happier with the final result."</p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col items-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden">
+                <img src={assets.testimony3} alt="testimony img" className="w-full h-full object-cover" />
+              </div>
+              <h2 className="text-xl font-serif font-semibold text-white">Ahmed Khan</h2>
+              <p className="text-lg font-serif text-gray-200">United Arab Emirates</p>
+              <p className="text-gray-100 text-sm">"A fantastic learning experience! The courses are practical, insightful, and well-structured."</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer2 />
     </div>

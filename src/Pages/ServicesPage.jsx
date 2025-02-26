@@ -6,55 +6,55 @@ const services = [
   {
     title: "AI-Powered Digital & Content Marketing",
     description: "Leverage AI-driven digital marketing strategies to automate and personalize your campaigns. Businesses using AI marketing automation have seen up to a 30% increase in revenue and 50% reduction in advertising costs due to improved customer targeting and efficiency.",
-    cta: "Speak with our consultants",
+    cta: "Speak with a consultants",
     image: assets.ai
   },
   {
     title: "Brand & Social Media Management",
     description: "We optimize your social media marketing strategy with AI-driven insights to enhance brand awareness and audience engagement. AI-powered content marketing has led to a 40% higher conversion rate and improved customer interactions.",
-    cta: "Speak with our consultants",
+    cta: "Speak with a consultants",
     image: assets.sm
   },
   {
     title: "Email Marketing",
     description: "Enhance email marketing automation with AI to maximize customer retention and sales conversion rates. AI-driven email marketing improves targeted email segmentation, resulting in a 41% higher open rate and 3x more revenue per campaign.",
-    cta: "Speak with our consultants",
+    cta: "Speak with a consultants",
     image: assets.email
   },
   {
     title: "SEO/SEM Marketing",
     description: "Optimize your website’s SEO strategy and search engine marketing (SEM) with AI-enhanced analytics. Businesses using AI-driven keyword optimization experience a 30% faster increase in organic traffic.",
-    cta: "Speak with our consultants",
+    cta: "Speak with a consultants",
     image: assets.seo
   },
   {
     title: "Video Production",
     description: "AI-powered video marketing strategies boost conversion rates by 80%, with businesses experiencing 49% faster growth when integrating high-quality video content into their digital advertising campaigns.",
-    cta: "Speak with our consultants",
+    cta: "Speak with a consultants",
     image: assets.video
   },
   {
     title: "Content Creation & Graphic Design",
     description: "Create high-quality digital content and AI-enhanced graphic designs that improve brand visibility and engagement. AI-powered content marketing automation increases engagement by 37%.",
-    cta: "Speak with our consultants",
+    cta: "Speak with a consultants",
     image: assets.content
   },
   {
     title: "Website & Mobile App Development",
     description: "Develop a high-converting website and mobile app optimized for SEO and user experience (UX). AI-driven web development solutions increase user retention rates by 60%.",
-    cta: "Speak with our consultants",
+    cta: "Speak with a consultants",
     image: assets.web
   },
   {
     title: "Market Research",
     description: "Make data-driven business decisions with AI-powered market research tools. Companies utilizing AI-driven consumer behavior analysis experience a 40% decrease in decision-making errors.",
-    cta: "Speak with our consultants",
+    cta: "Speak with a consultants",
     image: assets.research
   },
   {
     title: "Copywriting & Technical Writing",
     description: "AI-assisted copywriting and content writing enhance brand messaging and increase conversion rates. Businesses using AI-generated sales copy report a 35% improvement in content effectiveness.",
-    cta: "Speak with our consultants",
+    cta: "Speak with a consultants",
     image: assets.writing
   },
 ];
