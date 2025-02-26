@@ -12,7 +12,7 @@ const WhatsApp = () => {
                   before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white/20 before:rounded-full before:opacity-0 before:transition-opacity before:duration-300 before:ease-in-out hover:before:opacity-100"
             >
                 <FaWhatsapp className="text-2xl" />
-                Speak with our consultant
+                Speak with a consultant
             </a>
         </div>
     )
