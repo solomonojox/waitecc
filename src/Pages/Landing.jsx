@@ -74,8 +74,8 @@ const LandingPage = () => {
       {/* Testimonials */}
       <section className="py-16 px-6 md:px-8 bg-white">
         <div className="md:px-4">
-          <h1 className="text-3xl font-semibold text-center">What people say</h1>
-          <p className="text-center mb-8">Discover what our satisfied customers have to say about our services</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6 text-center">What people say</h1>
+          <p className="text-lg text-gray-400 opacity-90 mb-12 text-center">Discover what our satisfied customers have to say about our services</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
             <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg flex flex-col items-start glossy hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -114,7 +114,7 @@ const LandingPage = () => {
       {/* Client */}
       <div className="bg-gray-50 py-36 px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Esteemed Clients</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Brands our team has worked with</h2>
           <p className="text-lg text-gray-400 opacity-90 mb-12">
             Trusted by companies across various industries to deliver excellence.
           </p>

@@ -17,7 +17,7 @@ export default function WebAppDevelopment() {
                 <Navbar />
             </div>
 
-            <div className="bg-gray-100 py-6 px-6">
+            <div className="bg-gray-100 py-6">
                 {/* Header Section */}
                 <div
                     className="relative bg-cover bg-center h-72 flex items-center justify-center text-white text-center px-4"
@@ -30,7 +30,7 @@ export default function WebAppDevelopment() {
                 </div>
 
                 {/* Content Section */}
-                <div className="max-w-5xl mx-auto mt-12">
+                <div className="max-w-5xl mx-6 mt-12">
                     <p className="text-lg text-gray-700 text-center">
                         A well-optimized website increases conversions by <span className="font-bold text-blue-600">200-400%</span>, and <span className="font-bold text-blue-600">73%</span> of mobile users expect seamless app experiences.
                     </p>

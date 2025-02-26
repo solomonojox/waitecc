@@ -17,7 +17,7 @@ export default function SeoSemMarketing() {
                 <Navbar />
             </div>
 
-            <div className="bg-gray-100 py-6 px-6">
+            <div className="bg-gray-100 py-6 ">
                 {/* Header Section */}
                 <div
                     className="relative bg-cover bg-center h-64 flex items-center justify-center text-white text-center px-4"
@@ -30,7 +30,7 @@ export default function SeoSemMarketing() {
                 </div>
 
                 {/* Content Section */}
-                <div className="max-w-5xl mx-auto mt-12">
+                <div className="max-w-5xl mx-6 mt-12">
                     <p className="text-lg text-gray-700 text-center">
                         With 90% of search traffic going to first-page results, our SEO & paid search strategies ensure maximum visibility and lead generation.
                     </p>

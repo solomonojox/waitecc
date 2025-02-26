@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
     <section className="bg-white py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 text-center">
             Why Choose Waitecc?
           </h2>
           <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>

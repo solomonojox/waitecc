@@ -7,12 +7,12 @@ import AiDigitalContentMarketing from "../Pricing/AiDigitalContentMarketing";
 import Footer from "../Components/Footer";
 import WhatsApp from "../Components/WhatsApp";
 import assets from "../Assets/assets";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 const Ai = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [])
   
   return (
     <div>

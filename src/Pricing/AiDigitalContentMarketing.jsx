@@ -32,10 +32,10 @@ const AiDigitalContentMarketing = () => {
 
     return (
         <div className='flex flex-col items-center flex-wrap gap-4 py-8'>
-            <h1 className='text-[3vmax] md:text-[2vmax] font-semibold'>AI-Powered Digital & Content Marketing</h1>
-            <div className="flex justify-center flex-wrap gap-4 py-8">
+            <h1 className='text-[4vmax] md:text-[2vmax] font-semibold text-center'>AI-Powered Digital & Content Marketing</h1>
+            <div className="flex justify-center flex-wrap gap-8 md:gap-4 px-4 py-8">
                 {pricingPlans.map((plan, index) => (
-                    <motion.div key={index} whileHover={{ scale: 1.05 }} className={`rounded-md shadow-md w-[280px] overflow-hidden hover:border-blue-500 bg-white`}>
+                    <motion.div key={index} whileHover={{ scale: 1.05 }} className={`rounded-md shadow-md lg:w-[280px] overflow-hidden hover:border-blue-500 bg-white`}>
                         <div className={`${plan.bgColor} p-6 text-center`}>
                             <h2 className="text-2xl font-semibold">{plan.title}</h2>
                         </div>
