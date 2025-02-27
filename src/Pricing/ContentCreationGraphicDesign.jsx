@@ -5,7 +5,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 const plans = [
     {
         title: "Basic Plan",
-        price: 150000,
+        price: 350000,
         duration: "/month",
         features: [
             "15 custom designs per month (graphics and videos)",
@@ -81,12 +81,12 @@ const ContentCreationGraphicDesign = () => {
             <h1 className="text-[3vmax] md:text-[2vmax] font-semibold">
                 Content Creation & Graphic Design
             </h1>
-            <div className="flex justify-center flex-wrap gap-4 px-4 py-8">
+            <div className="flex justify-center flex-wrap gap-4 px-4 lg:px-0 py-8">
                 {plans.map((plan, index) => (
                     <motion.div
                         key={index}
                         whileHover={{ scale: 1.05 }}
-                        className={`rounded-md shadow-md md:w-[300px] overflow-hidden hover:border-blue-500 bg-white`}
+                        className={`rounded-md shadow-md md:w-[280px] overflow-hidden hover:border-blue-500 bg-white`}
                     >
                         <div className={`${plan.bgColor} p-6 text-center`}>
                             <h2 className="text-2xl font-semibold">{plan.title}</h2>

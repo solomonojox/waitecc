@@ -21,9 +21,9 @@ const Ai = () => {
       </div>
 
       <div className="bg-gray-100 text-gray-900 flex items-center justify-center">
-        <div className="w-full p-6">
-          <div className="lg:p-8">
-            <div style={{ backgroundImage: `url(${assets.ai})`, backgroundPosition: 'center', backgroundSize: 'cover' }} className="h-[350px] flex justify-center items-center">
+        <div className="w-full">
+          <div>
+            <div style={{ backgroundImage: `url(${assets.ai})`, backgroundPosition: 'center', backgroundSize: 'cover' }} className="h-[350px] flex justify-center items-center p-8">
               <div className="bg-black bg-opacity-50 p-6 rounded-lg">
                 <h1 className="text-3xl font-bold text-center text-white mb-6">
                   Harness AI-Driven Marketing
@@ -36,7 +36,7 @@ const Ai = () => {
               </div>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 px-6 lg:px-12">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Features & Measurable Results:</h2>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-4 bg-blue-50 p-4 rounded-lg">

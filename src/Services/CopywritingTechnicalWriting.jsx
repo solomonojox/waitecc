@@ -3,12 +3,12 @@ import WhatsApp from "../Components/WhatsApp";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import assets from "../Assets/assets";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export default function CopywritingTechnicalWriting() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
 
     return (
         <div>
@@ -29,7 +29,7 @@ export default function CopywritingTechnicalWriting() {
                 </div>
 
                 {/* Content Section */}
-                <div className="max-w-5xl mx-6 mt-12">
+                <div className="max-w-5xl mx-6 md:mx-auto mt-12">
                     <p className="text-lg text-gray-700 text-center">
                         Well-crafted content increases **conversions by 113%** and significantly enhances **brand credibility**.
                     </p>

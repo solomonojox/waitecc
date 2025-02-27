@@ -30,7 +30,7 @@ export default function VideoProduction() {
                 </div>
 
                 {/* Content Section */}
-                <div className="max-w-5xl mx-6 mt-12">
+                <div className="max-w-5xl mx-6 md:mx-auto mt-12">
                     <p className="text-lg text-gray-700 text-center">
                         Video content generates <span className="font-bold text-blue-600">1200%</span> more shares than text and images combined, making it essential for engagement and conversions.
                     </p>

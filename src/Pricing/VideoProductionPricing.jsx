@@ -5,7 +5,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 const pricingPlans = [
     {
         title: "15-Second Video",
-        price: 20000,
+        price: 25000,
         duration: "",
         features: [
             "High-quality short-form video",
@@ -18,7 +18,7 @@ const pricingPlans = [
     },
     {
         title: "20-Second Video",
-        price: 25000,
+        price: 35000,
         duration: "",
         features: [
             "Everything in 15-second video",
@@ -30,7 +30,7 @@ const pricingPlans = [
     },
     {
         title: "30-Second Video",
-        price: 30000,
+        price: 45000,
         duration: "",
         features: [
             "Everything in 20-second video",
@@ -43,7 +43,7 @@ const pricingPlans = [
     },
     {
         title: "1-Minute Video",
-        price: 45000,
+        price: 50000,
         duration: "",
         features: [
             "Everything in 30-second video",

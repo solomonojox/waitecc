@@ -4,12 +4,12 @@ import Footer from "../Components/Footer";
 import WhatsApp from "../Components/WhatsApp";
 import ContentCreationGraphicDesign from "../Pricing/ContentCreationGraphicDesign";
 import assets from "../Assets/assets";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export default function ContentCreation() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
     
     return (
         <div>
@@ -30,7 +30,7 @@ export default function ContentCreation() {
                 </div>
 
                 {/* Content Section */}
-                <div className="max-w-5xl mx-6 mt-12">
+                <div className="max-w-5xl mx-6 md:mx-auto mt-12">
                     <p className="text-lg text-gray-700 text-center">
                         Content marketing generates <span className="font-bold text-blue-600">3x more leads than paid ads</span>, making high-quality content & visuals essential for brand success.
                     </p>

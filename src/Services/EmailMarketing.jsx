@@ -3,12 +3,12 @@ import WhatsApp from "../Components/WhatsApp";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import assets from "../Assets/assets";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export default function EmailMarketing() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
 
     return (
         <div>
@@ -29,7 +29,7 @@ export default function EmailMarketing() {
                 </div>
 
                 {/* Content Section */}
-                <div className="max-w-5xl mx-6 mt-12">
+                <div className="max-w-5xl mx-6 md:mx-auto mt-12">
                     <p className="text-lg text-gray-700 text-center">
                         Email marketing delivers an <span className="font-bold text-blue-600">ROI of $42 for every $1 spent</span>, making it one of the most effective digital marketing strategies.
                     </p>

@@ -4,12 +4,12 @@ import Navbar from "../Components/Navbar";
 import WhatsApp from "../Components/WhatsApp";
 import BrandSocialMediaManagement from "../Pricing/BrandSocialMediaManagement";
 import assets from "../Assets/assets";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export default function BSM() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [])
   return (
     <div>
       <div className="sticky top-0 z-50">
@@ -27,7 +27,7 @@ export default function BSM() {
         </div>
 
         {/* Content Section */}
-        <div className="max-w-5xl mx-6 mt-12">
+        <div className="max-w-5xl mx-6 md:mx-auto mt-12">
           <p className="text-lg text-gray-700 text-center">
             With <span className="font-bold text-blue-600">90% of consumers</span> engaging with brands on social media, we ensure your business maintains a <span className="font-bold text-blue-600">strong, engaging, and results-driven presence.</span>
           </p>

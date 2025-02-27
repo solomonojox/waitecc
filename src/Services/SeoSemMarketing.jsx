@@ -30,7 +30,7 @@ export default function SeoSemMarketing() {
                 </div>
 
                 {/* Content Section */}
-                <div className="max-w-5xl mx-6 mt-12">
+                <div className="max-w-5xl mx-6 md:mx-auto mt-12">
                     <p className="text-lg text-gray-700 text-center">
                         With 90% of search traffic going to first-page results, our SEO & paid search strategies ensure maximum visibility and lead generation.
                     </p>

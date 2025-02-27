@@ -29,7 +29,7 @@ export default function MarketResearch() {
                 </div>
 
                 {/* Content Section */}
-                <div className="max-w-5xl mx-6 mt-12">
+                <div className="max-w-5xl mx-6 md:mx-auto mt-12">
                     <p className="text-lg text-gray-700 text-center">
                         Businesses that leverage data-driven decision-making are <span className="font-bold text-blue-600">23x</span> more likely to outperform competitors and <span className="font-bold text-blue-600">6x</span> more likely to retain customers.
                     </p>
