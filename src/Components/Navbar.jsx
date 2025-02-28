@@ -1,125 +1,128 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, memo } from "react";
+import { Link, useLocation } from "react-router-dom";
 import assets from "../Assets/assets";
-import { Link } from "react-router-dom";
-
 import { FaBars, FaTimes } from "react-icons/fa";
-// import { IoMdArrowDropdown } from "react-icons/io";
+
+// Memoized NavLink component for better performance
+const NavLink = memo(({ to, children }) => {
+  const location = useLocation();
+  const isActive = location.pathname === to;
+  
+  return (
+    <Link
+      to={to}
+      className={`font-medium transition-colors duration-200 ${
+        isActive 
+          ? "text-red-600 font-semibold underline underline-offset-4" 
+          : "text-gray-700 hover:text-primary"
+      }`}
+    >
+      {children}
+    </Link>
+  );
+});
+
+NavLink.displayName = "NavLink";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [innerMenu, setInnerMenu] = useState(false);
+  const location = useLocation();
+  
+  // Using useCallback to prevent unnecessary re-renders
+  const toggleMenu = useCallback(() => {
+    setMenuOpen(prevState => !prevState);
+  }, []);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  // Close menu when clicking outside
+  const closeMenu = useCallback(() => {
+    if (menuOpen) setMenuOpen(false);
+  }, [menuOpen]);
+
+  // Navigation items array for easier maintenance
+  const navItems = [
+    { to: "/", label: "Home" },
+    { to: "/services", label: "Services" },
+    { to: "/team", label: "Our Team" },
+    { to: "/contact", label: "Contact" },
+    { to: "/blog", label: "Blog" }
+  ];
 
   return (
-    <nav className="bg-white shadow-md border z-50 h-20 flex">
-      <div className="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link to='/' className="flex items-center space-x-4 cursor-pointer">
-          <img src={assets.waitecclogo} alt="Logo" className="w-40" />
+    <nav className="sticky top-0 bg-white shadow-md border-b z-50 h-20 flex">
+      <div className="container mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
+        {/* Logo with hover effect */}
+        <Link to="/" className="flex items-center space-x-4 cursor-pointer transition-transform duration-200 hover:scale-105">
+          <img 
+            src={assets.waitecclogo} 
+            alt="Waitecc Logo" 
+            className="w-40" 
+            loading="eager" // Ensures logo loads immediately
+          />
         </Link>
 
-        {/* Search Bar */}
-        {/* <div className="hidden lg:flex mx-6">
-          <div className="relative w-[600px]">
-            <input
-              type="text"
-              placeholder="Search courses, programs, and more..."
-              className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:border-primary"
-            />
-            <button className="absolute right-[5.5px] top-[5.5px] bg-primary rounded-full w-8 h-8 flex items-center justify-center text-white text-lg hover:bg-hoverPrimary">
-              <FaSearch />
-            </button>
-          </div>
-        </div> */}
-
-        {/* Hamburger Icon for Mobile */}
+        {/* Hamburger Icon with improved touch target */}
         <div className="lg:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-800 text-2xl focus:outline-none"
+            className="text-gray-800 text-2xl p-2 focus:outline-none focus:ring-2 focus:ring-primary rounded-md transition-colors duration-200"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            {menuOpen ? <FaTimes /> : <FaBars />}
+            {menuOpen ? <FaTimes className="text-primary" /> : <FaBars />}
           </button>
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center space-x-6">
-          <Link
-            to="/"
-            className="text-gray-800 font-medium hover:text-primary"
-          >
-            Home
-          </Link>
-          <Link
-            to="/services"
-            className="text-gray-800 font-medium hover:text-primary"
-          >
-            Services
-          </Link>
+        <div className="hidden lg:flex items-center space-x-8">
+          {navItems.map(item => (
+            <NavLink key={item.to} to={item.to}>
+              {item.label}
+            </NavLink>
+          ))}
+          
+          {/* Call to action button */}
           {/* <Link
-            to="/pricing"
-            className="text-gray-800 font-medium hover:text-primary"
-          >
-            Pricing
-          </Link> */}
-          <Link
-            to="/team"
-            className="text-gray-800 font-medium hover:text-primary"
-          >
-            Our team
-          </Link>
-          <Link
             to="/contact"
-            className="text-gray-800 font-medium hover:text-primary"
+            className="bg-primary hover:bg-primary/90 text-white py-2 px-6 rounded-full font-medium transition-all duration-200 hover:shadow-md"
           >
-            Contact
-          </Link>
-          <Link
-            to="#"
-            className="text-gray-800 font-medium hover:text-primary"
-          >
-            Blog
-          </Link>
+            Get Started
+          </Link> */}
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile Navigation Menu with animation */}
       {menuOpen && (
-        <div className="lg:hidden bg-white absolute top-20 w-full shadow-md py-10 px-6">
-          <div className="space-y-4">
-            <Link
-              to="/"
-              className="text-gray-800 font-medium hover:text-primary block"
-            >
-              Home
-            </Link>
-            <Link
-              to="/services"
-              className="text-gray-800 font-medium hover:text-primary block"
-            >
-              Services
-            </Link>
-            <Link
-              to="/pricing"
-              className="text-gray-800 font-medium hover:text-primary block"
-            >
-              Pricing
-            </Link>
-            <Link
-              to="/team"
-              className="text-gray-800 font-medium hover:text-primary block"
-            >
-              Our team
-            </Link>
-            <Link
-              to="/contact"
-              className="text-gray-800 font-medium hover:text-primary block"
-            >
-              Contact
-            </Link>
+        <div 
+          className="lg:hidden fixed inset-0 bg-black bg-opacity-50"
+          onClick={closeMenu}
+        >
+          <div 
+            className="bg-white absolute top-20 right-0 w-64 h-screen shadow-xl py-8 px-6 transform transition-transform duration-300 ease-in-out"
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="space-y-6">
+              {navItems.map(item => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className={`block py-2 border-b border-gray-100 font-medium ${
+                    location.pathname === item.to
+                      ? "text-red-600 underline underline-offset-4"
+                      : "text-gray-800 hover:text-primary"
+                  }`}
+                  onClick={closeMenu}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              
+              {/* <Link
+                to="/contact"
+                className="block w-full bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-md font-medium text-center transition-colors duration-200 mt-6"
+                onClick={closeMenu}
+              >
+                Get Started
+              </Link> */}
+            </div>
           </div>
         </div>
       )}
@@ -127,4 +130,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

@@ -16,6 +16,8 @@ import SeoSemMarketing from './Services/SeoSemMarketing.jsx';
 import VideoProduction from './Services/VideoProduction.jsx';
 import WebAppDevelopment from './Services/WebAppDevelopment.jsx';
 import MarketResearch from './Services/MarketResearch.jsx';
+import BlogPage from './Pages/BlogPage.jsx';
+
 function App() {
   return (
     <div>
@@ -26,6 +28,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/team" element={<Team/>}/>
+          <Route path="/blog" element={<BlogPage/>}/>
 
           <Route path="/services/ai" element={<Ai />} />
           <Route path="/services/brand&socialmanagement" element={<BrandSocialMediaManagement />} />
