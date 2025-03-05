@@ -103,6 +103,18 @@ const LandingPage = () => {
             <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
               <img src={assets.real} alt="Client 8 Logo" className="w-20 h-20 object-contain" />
             </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.comp1} alt="Client 8 Logo" className="w-20 h-20 object-contain" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.comp2} alt="Client 8 Logo" className="w-20 h-20 object-contain" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.comp3} alt="Client 8 Logo" className="w-20 h-20 object-contain" />
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6 flex justify-center items-center">
+              <img src={assets.comp4} alt="Client 8 Logo" className="w-20 h-20 object-contain" />
+            </div>
           </div>
         </div>
       </div>

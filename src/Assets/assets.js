@@ -30,6 +30,11 @@ import lekki from './lekki.jpg';
 import real from './real.png';
 import sterling from './sterling.PNG'
 import uba from './uba.gif'
+import comp1 from './comp1.jpg'
+import comp2 from './comp2.jpg'
+import comp3 from './comp3.jpg'
+import comp4 from './comp4.jpg'
+import comp5 from './comp5.jpg'
 
 const assets = {
     logo,
@@ -64,6 +69,11 @@ const assets = {
     real,
     sterling,
     uba,
+    comp1,
+    comp2,
+    comp3,
+    comp4,
+    comp5,
 }
 
 export default assets;

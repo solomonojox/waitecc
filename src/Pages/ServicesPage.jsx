@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import assets from '../Assets/assets';
 
 const services = [
@@ -71,12 +70,12 @@ const ServicesPage = () => {
               <div className="p-6">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">{service.title}</h2>
                 <p className="text-gray-600 mb-6">{service.description}</p>
-                <Link
-                  to="/contact" // Replace with your link
+                <a
+                  href='https://forms.gle/yDjwCxPE2hBTahAo6' // Replace with your link
                   className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
                 >
                   {service.cta}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
