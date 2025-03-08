@@ -14,7 +14,7 @@ const NavLink = memo(({ to, children }) => {
       className={`font-medium transition-colors duration-200 ${
         isActive 
           ? "text-red-600 font-semibold underline underline-offset-4" 
-          : "text-gray-700 hover:text-primary"
+          : "text-gray-700 hover:text-red-500"
       }`}
     >
       {children}
