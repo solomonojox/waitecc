@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 const WhatsApp = () => {
     return (
-        <div className="flex justify-center items-center my-10">
+        <div className="flex justify-center items-center ">
             <a
                 href="https://wa.me/+2348105826279"
                 target="_blank"

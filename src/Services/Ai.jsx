@@ -13,7 +13,7 @@ const Ai = () => {
   // useEffect(() => {
   //   window.scrollTo(0, 0)
   // }, [])
-  
+
   return (
     <div>
       <div className="sticky top-0 z-50">
@@ -71,7 +71,9 @@ const Ai = () => {
 
       <AiDigitalContentMarketing />
 
-      <WhatsApp />
+      <div className="my-10">
+        <WhatsApp />
+      </div>
 
       <Footer />
     </div>

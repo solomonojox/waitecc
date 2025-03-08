@@ -1,5 +1,6 @@
 // import React, { useEffect } from "react";
-import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import WhatsApp from "../Components/WhatsApp";
 import Footer2 from "../Components/Footer";
 import Header from "../Components/Navbar";
 import assets from "../Assets/assets";
@@ -10,6 +11,7 @@ const LandingPage = () => {
   // useEffect(() => {
   //   window.scrollTo(0, 0)
   // }, [])
+
   return (
     <div>
       <div className="sticky top-0 z-50">
@@ -36,13 +38,17 @@ const LandingPage = () => {
               <p className="text-lg mb-8">
                 Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
               </p>
-              <a
-                href="mailto:waiteccng@outlook.com"
-                className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-blue-100 transition-colors inline-flex items-center"
-              >
-                <FaEnvelope className="mr-2" /> Get a Free Consultation!
-              </a>
-              <div className="mt-8 text-sm space-y-2">
+              <div className="flex gap-4">
+                <a
+                  href="https://forms.gle/yDjwCxPE2hBTahAo6"
+                  className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-blue-100 transition-colors inline-flex items-center"
+                >
+                  <FaEnvelope className="mr-2" /> Get a Free Consultation!
+                </a>
+                <WhatsApp />
+
+              </div>
+              {/* <div className="mt-8 text-sm space-y-2">
                 <p className="flex items-center gap-2">
                   <FaPhoneAlt className="text-white" /> +234-810-582-6279, +234-807-799-3190
                 </p>
@@ -52,7 +58,7 @@ const LandingPage = () => {
                     waiteccng@outlook.com
                   </a>
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Illustration */}
