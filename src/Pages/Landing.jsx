@@ -31,10 +31,10 @@ const LandingPage = () => {
               <p className="text-lg mb-8">
               We Grow Your Brand's Revenue $$ with AI-Powered Digital Marketing Solutions <br /> Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col md:flex-row justify-center items-center gap-4">
                 <a
                   href="https://forms.gle/yDjwCxPE2hBTahAo6"
-                  className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-blue-100 transition-colors inline-flex items-center"
+                  className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-blue-100 transition-colors inline-flex justify-center items-center"
                 >
                   <FaEnvelope className="mr-2" /> Get a Free Consultation!
                 </a>
