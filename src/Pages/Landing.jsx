@@ -6,6 +6,7 @@ import Header from "../Components/Navbar";
 import assets from "../Assets/assets";
 import WhyChooseUs from "./WhyChooseUs";
 import ServicesPage from "./ServicesPage";
+import bg from '../Assets/bg.png'
 
 const LandingPage = () => {
   // useEffect(() => {
@@ -19,16 +20,16 @@ const LandingPage = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="lg:flex items-center gap-8 justify-between">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white flex items-center justify-center h-[100dvh]" style={{background: `url(${bg})`, backgroundSize: 'cover' }}>
+        <div className="max-w-7xl mx-auto px- lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center lg:gap-8 justify-between">
 
             {/* Text Content */}
-            <div className="lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
+            <div className="lg:w-1/2 text-center px-4 lg:text-left">
+              <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight lg:mb-6">
                 A.I Digital Marketing Agency
               </h1>
-              <p className="text-lg mb-8">
+              <p className="text-lg mb-2 lg:mb-8">
               We Grow Your Brand's Revenue $$ with AI-Powered Digital Marketing Solutions <br /> Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
               </p>
               <div className="flex flex-col md:flex-row justify-center items-center gap-4">
@@ -41,25 +42,14 @@ const LandingPage = () => {
                 <WhatsApp />
 
               </div>
-              {/* <div className="mt-8 text-sm space-y-2">
-                <p className="flex items-center gap-2">
-                  <FaPhoneAlt className="text-white" /> +234-810-582-6279, +234-807-799-3190
-                </p>
-                <p className="flex items-center gap-2">
-                  <FaEnvelope className="text-white" />
-                  <a href="mailto:waiteccng@outlook.com" className="underline">
-                    waiteccng@outlook.com
-                  </a>
-                </p>
-              </div> */}
             </div>
 
             {/* Illustration */}
-            <div className="lg:w-1/2 mt-12 lg:mt-0 flex justify-center">
+            <div className="lg:w-1/2 w-full mt-6 lg:mt-0 flex justify-center">
               <img
-                src={assets.hero2}
+                src={assets.mansmile}
                 alt="AI Solutions"
-                className="w-full max-w-lg shadow-lg rounded-2xl"
+                className="hidden lg:block max-w-lg shadow-lg lg:rounded-2xl"
               />
             </div>
           </div>
