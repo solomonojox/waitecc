@@ -27,7 +27,7 @@ const LandingPage = () => {
             {/* Text Content */}
             <div className="lg:w-1/2 text-center px-4 lg:text-left">
               <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight lg:mb-6">
-                A.I Digital Marketing Agency
+                A.I Powered Digital and Product Marketing Agency
               </h1>
               <p className="text-lg mb-2 lg:mb-8">
               We Grow Your Brand's Revenue $$ with AI-Powered Digital Marketing Solutions <br /> Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.

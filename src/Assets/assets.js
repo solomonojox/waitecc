@@ -36,6 +36,9 @@ import comp3 from './comp3.jpg'
 import comp4 from './comp4.jpg'
 import comp5 from './comp5.jpg'
 import mansmile from './mansmile.jpg'
+import mansmile2 from './mansmile2.png'
+import chart from './chart.png'
+import chartdb from './chartdb.png'
 
 const assets = {
     logo,
@@ -76,6 +79,9 @@ const assets = {
     comp4,
     comp5,
     mansmile,
+    mansmile2,
+    chart,
+    chartdb,
 }
 
 export default assets;
