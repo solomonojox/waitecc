@@ -21,6 +21,7 @@ const AiDigitalContentMarketing = () => {
 
     useEffect(() => {
         const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        console.log(timeZone)
         if (timeZone.includes("Europe")) {
             setCurrency("£");
             setConversionRate(1 / 800);
