@@ -95,16 +95,6 @@ const ContactUs = () => {
                 </div>
             </div>
 
-            <div className='m-10'>
-                <iframe
-                    src="https://www.chatbase.co/chatbot-iframe/DFvlAorCZhYwVSHcJL_Gw"
-                    width="100%"
-                    style={{ height: '100%', minHeight: '300px' }}
-                    frameBorder="0" // Note: camelCase in React
-                    title="Chatbot" // Important for accessibility
-                />
-            </div>
-
             <Footer />
         </div>
     );

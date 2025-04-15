@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold mb-4">Waitecc</h3>
           <p className="text-gray-400">
-            Elevate Your Brand with Cutting-Edge AI-Powered Digital Solutions. Let’s build your brand’s digital dominance—one strategy at a time!
+            Elevate Your Brand with Cutting-Edge AI-Powered Digital Solutions. Let’s build your brand’s digital dominance, one strategy at a time!
           </p>
           <div className="mt-4 space-y-2">
             <p className="flex items-center gap-2">
