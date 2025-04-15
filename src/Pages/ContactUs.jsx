@@ -12,7 +12,7 @@ const ContactUs = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-    
+
     return (
         <div className="">
             <div className="sticky top-0 z-50">
@@ -93,6 +93,16 @@ const ContactUs = () => {
                         </button>
                     </form>
                 </div>
+            </div>
+
+            <div className='m-10'>
+                <iframe
+                    src="https://www.chatbase.co/chatbot-iframe/DFvlAorCZhYwVSHcJL_Gw"
+                    width="100%"
+                    style={{ height: '100%', minHeight: '300px' }}
+                    frameBorder="0" // Note: camelCase in React
+                    title="Chatbot" // Important for accessibility
+                />
             </div>
 
             <Footer />
