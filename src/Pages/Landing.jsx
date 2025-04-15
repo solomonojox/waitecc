@@ -7,8 +7,17 @@ import assets from "../Assets/assets";
 import WhyChooseUs from "./WhyChooseUs";
 import ServicesPage from "./ServicesPage";
 import bg from '../Assets/bg.png'
+import ChatAI from "../Components/ChatAI";
+import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
+import { useCallback, useState } from "react";
 
 const LandingPage = () => {
+  const [showChat, setShowChat] = useState(false);
+
+  const closeMenu = useCallback(() => {
+    if (showChat) setShowChat(false);
+  }, [showChat]);
+
   // useEffect(() => {
   //   window.scrollTo(0, 0)
   // }, [])
@@ -19,8 +28,20 @@ const LandingPage = () => {
         <Header />
       </div>
 
+      <div className="fixed right-6 bottom-2 z-50">
+        <div onClick={() => setShowChat(!showChat)} className="cursor-pointer bg-white p-2 rounded-full shadow-xl border border-black">
+          <IoChatbubbleEllipsesSharp className=" text-3xl text-blue-600 cursor-pointer" title="Chat" />
+        </div>
+        <p className="text-sm bg-white flex justify-center items-center rounded-full shadow-xl">Ask us</p>
+      </div>
+
+      {showChat && <ChatAI />}
+
+      {showChat && <div className="fixed inset-0 bg-black bg-opacity-0 z-40" onClick={closeMenu}></div>}
+
+
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white flex items-center justify-center h-[100dvh]" style={{background: `url(${bg})`, backgroundSize: 'cover' }}>
+      <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white flex items-center justify-center h-[100dvh]" style={{ background: `url(${bg})`, backgroundSize: 'cover' }}>
         <div className="max-w-7xl mx-auto px- lg:px-8">
           <div className="flex flex-col lg:flex-row items-center lg:gap-8 justify-between">
 
@@ -30,7 +51,7 @@ const LandingPage = () => {
                 A.I Powered Digital and Product Marketing Agency
               </h1>
               <p className="text-lg mb-2 lg:mb-8">
-              We Grow Your Brand's Revenue $$ with AI-Powered Digital Marketing Solutions <br /> Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
+                We Grow Your Brand's Revenue $$ with AI-Powered Digital Marketing Solutions <br /> Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
               </p>
               <div className="flex flex-col md:flex-row justify-center items-center gap-4">
                 <a
