@@ -53,9 +53,9 @@ const Navbar = () => {
         {/* Logo with hover effect */}
         <Link to="/" className="flex items-center space-x-4 cursor-pointer transition-transform duration-200 hover:scale-105">
           <img 
-            src={assets.waitecclogo} 
-            alt="Waitecc Logo" 
-            className="w-40" 
+            src={assets.boakye} 
+            alt="Boakye Logo" 
+            className="w-32"
             loading="eager" // Ensures logo loads immediately
           />
         </Link>

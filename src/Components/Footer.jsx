@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
         {/* About Section */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Waitecc</h3>
+          <h3 className="text-xl font-semibold mb-4">boakye</h3>
           <p className="text-gray-400">
             Elevate Your Brand with Cutting-Edge AI-Powered Digital Solutions. Let’s build your brand’s digital dominance, one strategy at a time!
           </p>
@@ -15,13 +15,13 @@ export default function Footer() {
               <FaPhoneAlt /> +234-810-582-6279, +234-807-799-3190
             </p>
             <p className="flex items-center gap-2">
-              <FaEnvelope /> waiteccng@outlook.com
+              <FaEnvelope /> boakyeng@outlook.com
             </p>
             <p className="flex items-center gap-2">
               <FaMapMarkerAlt /> Lagos, Nigeria
             </p>
             <p className="flex items-center gap-2">
-              <FaGlobe /> <a href="https://www.waitecc.com.ng" className="hover:underline">www.waitecc.com.ng</a>
+              <FaGlobe /> <a href="https://www.boakye.com.ng" className="hover:underline">www.boakye.com.ng</a>
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="border-t border-gray-700 mt-8 pt-4 text-center">
-        <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Waitecc. All rights reserved.</p>
+        <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} boakye. All rights reserved.</p>
       </div>
     </footer>
   );
