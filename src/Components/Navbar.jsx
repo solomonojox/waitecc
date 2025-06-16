@@ -42,6 +42,7 @@ const Navbar = () => {
   const navItems = [
     { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
+    { to: "/ai-agent", label: "Ai Agent" },
     { to: "/team", label: "Our Team" },
     { to: "/contact", label: "Contact" },
     { to: "/blog", label: "Blog" }
