@@ -121,6 +121,7 @@ const VideoProductionPricing = () => {
                             </ul>
                             <button
                                 className={`${plan.buttonColor} text-white px-6 py-2 rounded-lg transition-colors`}
+                                onClick={() =>window.open("https://forms.gle/fr2Pi23Dco3sbySCA", "_blank")}
                             >
                                 Choose Plan
                             </button>

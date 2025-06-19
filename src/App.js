@@ -30,7 +30,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/ai-agent" element={<AiAgentPage />} />
           <Route path="/ai-automation" element={<AIAutomationServicesPage />} />
-          <Route path="/foundation" element={<Foundation />} />
+          <Route path="/let-a-girl-dream" element={<Foundation />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/team" element={<Team/>}/>

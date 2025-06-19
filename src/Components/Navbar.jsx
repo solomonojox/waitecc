@@ -11,7 +11,7 @@ const NavLink = memo(({ to, children }) => {
   return (
     <Link
       to={to}
-      className={`font-medium transition-colors duration-200 ${
+      className={`text-sm transition-colors duration-200 ${
         isActive 
           ? "text-red-600 font-semibold underline underline-offset-4" 
           : "text-gray-700 hover:text-red-500"
@@ -44,7 +44,7 @@ const Navbar = () => {
     { to: "/services", label: "Services" },
     { to: "/ai-agent", label: "Ai Agent" },
     { to: "/ai-automation", label: "Ai Automation" },
-    { to: "/foundation", label: "Let a girl dream" },
+    { to: "/let-a-girl-dream", label: "Let a girl dream" },
     { to: "/team", label: "Our Team" },
     { to: "/contact", label: "Contact" },
     { to: "/blog", label: "Blog" },

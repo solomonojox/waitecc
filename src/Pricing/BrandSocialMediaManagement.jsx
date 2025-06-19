@@ -112,7 +112,7 @@ const BrandSocialMediaManagement = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className={`${plan.buttonColor} text-white px-6 py-2 rounded-lg transition-colors`}>
+                            <button className={`${plan.buttonColor} text-white px-6 py-2 rounded-lg transition-colors`} onClick={() =>window.open("https://forms.gle/fr2Pi23Dco3sbySCA", "_blank")}>
                                 {plan.title === "Customized Plan" ? "Contact Us" : "Choose Plan"}
                             </button>
                         </div>
