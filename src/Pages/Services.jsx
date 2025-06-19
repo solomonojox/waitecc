@@ -83,15 +83,23 @@ const Services = () => {
                     <p className="lg:text-[20px]">
                         From AI-powered digital strategies to stunning visual content and seamless web experiences, our services are designed to elevate your business. Whether you're looking to boost engagement, optimize campaigns, or craft compelling brand stories, we've got you covered.
                     </p>
-                    <button className="bg-secondary hover:bg-hoverSecondary px-8 py-4 rounded-lg text-white text-lg font-medium transition-colors">
+                    <button className="bg-secondary hover:bg-hoverSecondary px-8 py-4 rounded-lg text-white text-lg font-medium transition-colors"
+                        // scroll to #services
+                        onClick={() => {
+                            const servicesSection = document.getElementById('services');
+                            if (servicesSection) {
+                                servicesSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
+                    >
                         View More
                     </button>
                 </div>
-                <img src={assets.services} alt="headerimg" className="lg:w-[50%] max-w-full mt-6 lg:mt-0 hidden lg:flex" />
+                <img src={assets.services} alt="headerimg" className="lg:w-[40%] max-w-full mt-6 lg:mt-0 hidden lg:flex" />
             </div>
 
             {/* Services Section */}
-            <div className="flex flex-col items-center justify-center mt-20 py-10 lg:px-20">
+            <div className="flex flex-col items-center justify-center mt-20 py-10 lg:px-20" id='services'>
                 <h1 className="text-[3vmax] text-center mb-10 font-bold">Our Services</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-10">
                     {services.map((service, index) => (

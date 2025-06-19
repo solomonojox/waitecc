@@ -1,4 +1,4 @@
-import logo from './logo.png';
+import logo from './boakye.png';
 import hero2 from '../Assets/hero2.jpg'
 import hero3 from '../Assets/hero3.avif'
 import services from '../Assets/services.png'
@@ -41,6 +41,7 @@ import chart from './chart.png'
 import chartdb from './chartdb.png'
 import boakye from './boakye.png'
 import homeHero from './homehero.jpeg'
+import girldream from './girldream.jpg'
 
 const assets = {
     logo,
@@ -85,7 +86,8 @@ const assets = {
     chart,
     chartdb,
     boakye,
-    homeHero
+    homeHero,
+    girldream,
 }
 
 export default assets;

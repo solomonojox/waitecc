@@ -21,7 +21,7 @@ export default function Footer() {
               <FaMapMarkerAlt /> Lagos, Nigeria
             </p>
             <p className="flex items-center gap-2">
-              <FaGlobe /> <a href="https://www.boakye.com.ng" className="hover:underline">www.boakye.com.ng</a>
+              <FaGlobe /> <a href="https://boakyedigitalsolutions.com/" className="hover:underline">boakyedigitalsolutions.com</a>
             </p>
           </div>
         </div>

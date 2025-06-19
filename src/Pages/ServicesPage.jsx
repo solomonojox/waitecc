@@ -71,7 +71,7 @@ const ServicesPage = () => {
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">{service.title}</h2>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <a
-                  href='https://forms.gle/yDjwCxPE2hBTahAo6' // Replace with your link
+                  href='https://forms.gle/fr2Pi23Dco3sbySCA' // Replace with your link
                   className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
                 >
                   {service.cta}

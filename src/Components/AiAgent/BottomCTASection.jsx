@@ -50,14 +50,14 @@ const BottomCTASection = () => {
 
             <div className="mt-12 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
               {/* Start Free Trial Button */}
-              <a href="https://forms.gle/yDjwCxPE2hBTahAo6" target="_blank" rel="noopener noreferrer" className="group w-full md:w-auto px-8 py-4 bg-primary hover:bg-primary/85 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center">
+              <a href="https://forms.gle/fr2Pi23Dco3sbySCA" target="_blank" rel="noopener noreferrer" className="group w-full md:w-auto px-8 py-4 bg-primary hover:bg-primary/85 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center">
                 Start now
                 <ArrowRight size={20} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
 
               {/* Get in Touch Button */}
               <button className="group w-full md:w-auto px-8 py-4 bg-transparent border-2 border-primary text-primary font-bold rounded-xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center"
-                onClick={() => window.open('https://forms.gle/yDjwCxPE2hBTahAo6', '_blank')}
+                onClick={() => window.open('https://forms.gle/fr2Pi23Dco3sbySCA', '_blank')}
               >
                 Get in Touch
                 <MessageCircle size={20} className="ml-2 transition-transform duration-300 group-hover:scale-110" />

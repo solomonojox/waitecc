@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Heart, BookOpen, Home, Utensils, Truck, Users, Globe, Star, ChevronRight, Play } from 'lucide-react';
 import Navbar from '../Components/Navbar';
 import { donationImage, donationBg } from '../Assets/donation/donationImage';
+import assets from '../Assets/assets';
 
 const Foundation = () => {
     console.log(donationImage)
@@ -58,7 +59,7 @@ const Foundation = () => {
             </div>
             <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-orange-100">
                 {/* Hero Section */}
-                <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{background: `url(${donationBg})`, backgroundPosition: 'center'}}>
+                <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: `url(${donationBg})`, backgroundPosition: 'center' }}>
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-yellow-500 to-orange-700 opacity-70"></div>
                     <div className="absolute inset-0">
                         <div className="absolute top-20 left-20 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse"></div>
@@ -68,15 +69,18 @@ const Foundation = () => {
 
                     <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
                         <div className="mb-8">
-                            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent animate-fade-in">
+                            <div className="w-32 h-32 mx-auto mb-4 animate-fade-in rounded-full overflow-hidden">
+                                <img src={assets.girldream} alt="letgirldream"  className='w-full h-full object-contain' />
+                            </div>
+                            <h1 className="text-6xl md:text-8xl font-bold mb-2 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent animate-fade-in">
                                 Let a Girl Dream
                             </h1>
-                            <h2 className="text-2xl md:text-4xl font-light mb-8 opacity-90">
+                            <h2 className="text-2xl md:text-4xl font-light mb-2 opacity-90">
                                 Empowering Africa's Future, One Child at a Time
                             </h2>
                         </div>
 
-                        <p className="text-xl md:text-2xl mb-12 leading-relaxed max-w-4xl mx-auto font-light">
+                        <p className="text-xl md:text-2xl mb-4 leading-relaxed max-w-4xl mx-auto font-light">
                             Every child deserves the right to <span className="font-bold text-yellow-200">dream, learn, and lead</span>,
                             regardless of their background or location.
                         </p>
@@ -188,7 +192,7 @@ const Foundation = () => {
                                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
                                     {projects[activeProject].description}
                                 </p>
-                                <button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105" onClick={handlePaystackRedirect}>
                                     Support This Project
                                 </button>
                             </div>
@@ -239,7 +243,7 @@ const Foundation = () => {
                                 <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                             </button>
 
-                            <button className="group border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-full font-bold text-xl hover:border-orange-500 hover:text-orange-500 transition-all duration-300 flex items-center gap-3">
+                            <button className="group border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-full font-bold text-xl hover:border-orange-500 hover:text-orange-500 transition-all duration-300 flex items-center gap-3" onClick={handlePaystackRedirect}>
                                 <Users className="w-7 h-7" />
                                 Become a Volunteer
                             </button>

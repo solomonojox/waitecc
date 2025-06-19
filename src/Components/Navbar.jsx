@@ -44,7 +44,7 @@ const Navbar = () => {
     { to: "/services", label: "Services" },
     { to: "/ai-agent", label: "Ai Agent" },
     { to: "/ai-automation", label: "Ai Automation" },
-    { to: "/foundation", label: "Foundation" },
+    { to: "/foundation", label: "Let a girl dream" },
     { to: "/team", label: "Our Team" },
     { to: "/contact", label: "Contact" },
     { to: "/blog", label: "Blog" },
@@ -75,7 +75,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-4">
           {navItems.map(item => (
             <NavLink key={item.to} to={item.to}>
               {item.label}

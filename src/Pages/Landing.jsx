@@ -52,7 +52,7 @@ const LandingPage = () => {
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <a
-              href="https://forms.gle/yDjwCxPE2hBTahAo6"
+              href="https://forms.gle/fr2Pi23Dco3sbySCA"
               className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-blue-100 transition-colors inline-flex justify-center items-center"
             >
               <FaEnvelope className="mr-2" /> Get a Free Consultation!
