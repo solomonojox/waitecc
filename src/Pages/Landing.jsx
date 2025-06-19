@@ -6,7 +6,7 @@ import Header from "../Components/Navbar";
 import assets from "../Assets/assets";
 import WhyChooseUs from "./WhyChooseUs";
 import ServicesPage from "./ServicesPage";
-import bg from '../Assets/bg.png'
+// import bg from '../Assets/bg.png'
 import ChatAI from "../Components/ChatAI";
 import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
 import { useCallback, useState } from "react";
@@ -41,38 +41,24 @@ const LandingPage = () => {
 
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white flex items-center justify-center h-[100dvh]" style={{ background: `url(${bg})`, backgroundSize: 'cover' }}>
-        <div className="max-w-7xl mx-auto px- lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center lg:gap-8 justify-between">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white flex items-center justify-center h-[100dvh] relative" style={{ background: `url(${assets.homeHero})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-800 to-gray-800 opacity-70"></div>
+        <div className="flex flex-col items-center justify-center text-center px-4 z-10">
+          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight lg:mb-6">
+            A.I Powered Digital and Product Marketing Agency
+          </h1>
+          <p className="text-lg mb-2 lg:mb-8 lg:mx-[5%]">
+            We Grow Your Brand's Revenue $$ with AI-Powered Digital Marketing Solutions. Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
+          </p>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+            <a
+              href="https://forms.gle/yDjwCxPE2hBTahAo6"
+              className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-blue-100 transition-colors inline-flex justify-center items-center"
+            >
+              <FaEnvelope className="mr-2" /> Get a Free Consultation!
+            </a>
+            <WhatsApp />
 
-            {/* Text Content */}
-            <div className="lg:w-1/2 text-center px-4 lg:text-left">
-              <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight lg:mb-6">
-                A.I Powered Digital and Product Marketing Agency
-              </h1>
-              <p className="text-lg mb-2 lg:mb-8">
-                We Grow Your Brand's Revenue $$ with AI-Powered Digital Marketing Solutions <br /> Our data-backed strategies ensure your business attracts the right audience, builds trust, and converts visitors into loyal clients.
-              </p>
-              <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-                <a
-                  href="https://forms.gle/yDjwCxPE2hBTahAo6"
-                  className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-blue-100 transition-colors inline-flex justify-center items-center"
-                >
-                  <FaEnvelope className="mr-2" /> Get a Free Consultation!
-                </a>
-                <WhatsApp />
-
-              </div>
-            </div>
-
-            {/* Illustration */}
-            <div className="lg:w-1/2 w-full mt-6 lg:mt-0 flex justify-center">
-              <img
-                src={assets.mansmile}
-                alt="AI Solutions"
-                className="hidden lg:block max-w-lg shadow-lg lg:rounded-2xl"
-              />
-            </div>
           </div>
         </div>
       </div>

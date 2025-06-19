@@ -18,6 +18,8 @@ import WebAppDevelopment from './Services/WebAppDevelopment.jsx';
 import MarketResearch from './Services/MarketResearch.jsx';
 import BlogPage from './Pages/BlogPage.jsx';
 import AiAgentPage from './Pages/AiAgent.jsx';
+import AIAutomationServicesPage from './Pages/AIAutomationServicesPage.jsx';
+import Foundation from './Pages/Foundation.jsx';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/ai-agent" element={<AiAgentPage />} />
+          <Route path="/ai-automation" element={<AIAutomationServicesPage />} />
+          <Route path="/foundation" element={<Foundation />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/team" element={<Team/>}/>

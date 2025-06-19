@@ -40,6 +40,7 @@ import mansmile2 from './mansmile2.png'
 import chart from './chart.png'
 import chartdb from './chartdb.png'
 import boakye from './boakye.png'
+import homeHero from './homehero.jpeg'
 
 const assets = {
     logo,
@@ -84,6 +85,7 @@ const assets = {
     chart,
     chartdb,
     boakye,
+    homeHero
 }
 
 export default assets;

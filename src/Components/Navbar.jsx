@@ -43,9 +43,11 @@ const Navbar = () => {
     { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
     { to: "/ai-agent", label: "Ai Agent" },
+    { to: "/ai-automation", label: "Ai Automation" },
+    { to: "/foundation", label: "Foundation" },
     { to: "/team", label: "Our Team" },
     { to: "/contact", label: "Contact" },
-    { to: "/blog", label: "Blog" }
+    { to: "/blog", label: "Blog" },
   ];
 
   return (
