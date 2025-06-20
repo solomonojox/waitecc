@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Heart, BookOpen, Home, Utensils, Truck, Users, Globe, Star, ChevronRight, Play } from 'lucide-react';
 import Navbar from '../Components/Navbar';
-import { donationImage, donationBg } from '../Assets/donation/donationImage';
+import { donationImage, donationBg, } from '../Assets/donation/donationImage';
 import assets from '../Assets/assets';
+import VideoModal from '../Components/VideoModal';
+import video from '../Assets/donation/foundation.mp4'
 
 const Foundation = () => {
-    console.log(donationImage)
+    const [open, setOpen] = useState(false);
     const [activeProject, setActiveProject] = useState(0);
 
     const projects = [
@@ -70,7 +72,7 @@ const Foundation = () => {
                     <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
                         <div className="mb-8">
                             <div className="w-32 h-32 mx-auto mb-4 animate-fade-in rounded-full overflow-hidden">
-                                <img src={assets.girldream} alt="letgirldream"  className='w-full h-full object-contain' />
+                                <img src={assets.girldream} alt="letgirldream" className='w-full h-full object-contain' />
                             </div>
                             <h1 className="text-6xl md:text-8xl font-bold mb-2 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent animate-fade-in">
                                 Let a Girl Dream
@@ -95,10 +97,17 @@ const Foundation = () => {
                                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
 
-                            <button className="group border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300 flex items-center gap-3">
+                            <button className="group border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300 flex items-center gap-3" onClick={() => setOpen(true)}>
                                 <Play className="w-6 h-6" />
                                 Watch Our Story
                             </button>
+
+                            <VideoModal
+                                isOpen={open}
+                                onClose={() => setOpen(false)}
+                                videoUrl={video}
+                                title="Watch Our Story"
+                            />
                         </div>
                     </div>
                 </section>

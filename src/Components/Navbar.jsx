@@ -51,7 +51,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className=" bg-white shadow-md border-b z-50 h-16 flex">
+    <nav className=" bg-white shadow-md border-b z-40 h-16 flex">
       <div className="container mx-auto px-4 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo with hover effect */}
         <Link to="/" className="flex items-center space-x-4 cursor-pointer transition-transform duration-200 hover:scale-105">
