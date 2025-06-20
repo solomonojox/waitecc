@@ -53,7 +53,7 @@ const AiDigitalContentMarketing = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className={`${plan.buttonColor} text-white px-6 py-2 rounded-lg transition-colors`} onClick={() =>window.open("https://forms.gle/fr2Pi23Dco3sbySCA", "_blank")}>
+                            <button className={`${plan.buttonColor} text-white px-6 py-2 rounded-lg transition-colors`} onClick={() =>window.open("https://docs.google.com/forms/d/e/1FAIpQLSe8wDe6Eo_ksOqSVJmMUuCa1aOCyM9ajuO178YEc5XTCRayZA/viewform?usp=header", "_blank")}>
                                 {plan.title === "Customized Plan" ? "Contact Us" : "Choose Plan"}
                             </button>
                         </div>

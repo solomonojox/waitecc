@@ -52,7 +52,7 @@ const LandingPage = () => {
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <a
-              href="https://forms.gle/fr2Pi23Dco3sbySCA"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe8wDe6Eo_ksOqSVJmMUuCa1aOCyM9ajuO178YEc5XTCRayZA/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-blue-100 transition-colors inline-flex justify-center items-center"

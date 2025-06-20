@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
             <h3 className="text-2xl font-bold text-white mb-6">
               Let's revolutionize your marketing and sales with AI-powered strategies.
             </h3>
-            <a href='https://forms.gle/fr2Pi23Dco3sbySCA' className="bg-white text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center">
+            <a href='https://docs.google.com/forms/d/e/1FAIpQLSe8wDe6Eo_ksOqSVJmMUuCa1aOCyM9ajuO178YEc5XTCRayZA/viewform?usp=header' className="bg-white text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center">
               Speak with our consultants today
               <ArrowUpRight className="ml-2 h-5 w-5" />
             </a>

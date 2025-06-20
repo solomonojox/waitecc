@@ -205,7 +205,7 @@ const SolutionSection = () => {
                             ))}
 
                             <div className="pt-6">
-                                <a href="https://forms.gle/fr2Pi23Dco3sbySCA" target="_blank" rel="noopener noreferrer" className="w-full py-4 px-8 bg-primary hover:bg-primary/85 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 flex items-center justify-center">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8wDe6Eo_ksOqSVJmMUuCa1aOCyM9ajuO178YEc5XTCRayZA/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="w-full py-4 px-8 bg-primary hover:bg-primary/85 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 flex items-center justify-center">
                                     <span>See It In Action</span>
                                     <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

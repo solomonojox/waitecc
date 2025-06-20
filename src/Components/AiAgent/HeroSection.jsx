@@ -98,7 +98,7 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(255, 107, 0, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
                 variants={itemVariants}
-                onClick={() => window.open('https://forms.gle/fr2Pi23Dco3sbySCA', '_blank')}
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSe8wDe6Eo_ksOqSVJmMUuCa1aOCyM9ajuO178YEc5XTCRayZA/viewform?usp=header', '_blank')}
               >
                 Book a Demo
               </motion.button>

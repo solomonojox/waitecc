@@ -103,7 +103,7 @@ const AIAutomationServicesPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button
                   // onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
-                  onClick={() => window.open('https://forms.gle/fr2Pi23Dco3sbySCA', '_blank')}
+                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSe8wDe6Eo_ksOqSVJmMUuCa1aOCyM9ajuO178YEc5XTCRayZA/viewform?usp=header', '_blank')}
                   className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   Get Your Free Automation Blueprint
