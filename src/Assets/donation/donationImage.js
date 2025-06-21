@@ -5,8 +5,12 @@ import im4 from './im4.jpg'
 import im5 from './im5.jpg'
 import im6 from "./im6.jpg";
 import videoUrl from './foundation.mp4'
+import schoolproject from './schoolproject.jpg'
+import coFounder from './cofounder.jpg'
 
-export const donationImage = [im1, im2, im3, im4, im5, im6];
+export const donationImage = [im1, im2, im3, im4, im5, im6,];
 
 export const donationBg = im5
 export const donationVideo = videoUrl;
+export const schoolprojectImage = schoolproject;
+export const coFounderImage = coFounder;

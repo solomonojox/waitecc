@@ -20,6 +20,11 @@ import BlogPage from './Pages/BlogPage.jsx';
 import AiAgentPage from './Pages/AiAgent.jsx';
 import AIAutomationServicesPage from './Pages/AIAutomationServicesPage.jsx';
 import Foundation from './Pages/Foundation.jsx';
+import TheSchoolProject from './Components/Foundation/TheSchoolProject.jsx';
+import SafeHousing from './Components/Foundation/SafeHousing.jsx';
+import FeedingTheFuture from './Components/Foundation/FeedingTheFuture.jsx';
+import UtilityVehicles from './Components/Foundation/UtilityVehicles.jsx';
+import FoundationAboutUs from './Components/Foundation/FoundationAboutUs.jsx';
 
 function App() {
   return (
@@ -45,6 +50,13 @@ function App() {
           <Route path="/services/WebAppDevelopment" element={<WebAppDevelopment />} />
           <Route path="/services/MarketResearch" element={<MarketResearch />} />
           <Route path="/services/CopywritingTechnicalWriting" element={<MarketResearch />} />
+
+          <Route path="/let-a-girl-dream/digital-learning" element={<MarketResearch />} />
+          <Route path="/let-a-girl-dream/school-project" element={<TheSchoolProject />} />
+          <Route path="/let-a-girl-dream/safe-housing" element={<SafeHousing />} />
+          <Route path="/let-a-girl-dream/feeding-future" element={<FeedingTheFuture />} />
+          <Route path="/let-a-girl-dream/utility-vehicles" element={<UtilityVehicles />} />
+          <Route path="/let-a-girl-dream/about-us" element={<FoundationAboutUs />} />
         </Routes>
       </Router>
     </div>

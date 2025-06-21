@@ -8,38 +8,42 @@ import video from '../Assets/donation/foundation.mp4'
 
 const Foundation = () => {
     const [open, setOpen] = useState(false);
-    const [activeProject, setActiveProject] = useState(0);
 
     const projects = [
         {
             icon: <BookOpen className="w-8 h-8" />,
             title: "Digital Learning Without Limits",
             description: "Solar-powered offline libraries bringing thousands of books, videos, and STEM resources to children in underserved communities.",
-            color: "from-blue-500 to-purple-600"
+            color: "from-blue-500 to-purple-600",
+            link: "/let-a-girl-dream/digital-learning"
         },
         {
             icon: <Home className="w-8 h-8" />,
             title: "The School Project",
             description: "Creating digital learning hubs, training teachers, and building classrooms that inspire dreams.",
-            color: "from-green-500 to-teal-600"
+            color: "from-green-500 to-teal-600",
+            link: "/let-a-girl-dream/school-project"
         },
         {
             icon: <Users className="w-8 h-8" />,
             title: "Safe Housing for Growing Minds",
             description: "Building shelters and dormitories that offer comfort, safety, and stability for vulnerable children.",
-            color: "from-orange-500 to-red-600"
+            color: "from-orange-500 to-red-600",
+            link: "/let-a-girl-dream/safe-housing"
         },
         {
             icon: <Utensils className="w-8 h-8" />,
             title: "Feeding the Future",
             description: "Ensuring children in remote areas get access to nutritious meals every day.",
-            color: "from-yellow-500 to-orange-600"
+            color: "from-yellow-500 to-orange-600",
+            link: "/let-a-girl-dream/feeding-future"
         },
         {
             icon: <Truck className="w-8 h-8" />,
             title: "Utility Vehicles for Outreach",
             description: "Delivering materials and reaching forgotten areas to expand our impact across regions.",
-            color: "from-purple-500 to-pink-600"
+            color: "from-purple-500 to-pink-600",
+            link: "/let-a-girl-dream/utility-vehicles"
         }
     ];
 
@@ -102,6 +106,11 @@ const Foundation = () => {
                                 Watch Our Story
                             </button>
 
+                            <button className="group border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300 flex items-center gap-3" onClick={() => window.location.href = '/let-a-girl-dream/about-us'}>
+                                {/* <Play className="w-6 h-6" /> */}
+                                About Us
+                            </button>
+
                             <VideoModal
                                 isOpen={open}
                                 onClose={() => setOpen(false)}
@@ -156,55 +165,45 @@ const Foundation = () => {
                 </section>
 
                 {/* Projects Section */}
-                <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+                <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
                     <div className="max-w-7xl mx-auto px-6">
-                        <div className="text-center mb-16">
-                            <h2 className="text-5xl font-bold text-gray-800 mb-6">Our Impact Projects</h2>
-                            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                                Each project is designed to create lasting change in the lives of African children
+                        <div className="text-center mb-12">
+                            <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Impact Projects</h2>
+                            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                                Each project creates lasting change for African children
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                            <div className="space-y-4">
-                                {projects.map((project, index) => (
-                                    <div
-                                        key={index}
-                                        onClick={() => setActiveProject(index)}
-                                        className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 ${activeProject === index
-                                            ? 'bg-white shadow-2xl scale-105'
-                                            : 'bg-white/50 hover:bg-white hover:shadow-lg'
-                                            }`}
-                                    >
-                                        <div className="flex items-center gap-4">
-                                            <div className={`p-3 rounded-xl bg-gradient-to-r ${project.color} text-white`}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                            {projects.map((project, index) => (
+                                <a
+                                    key={index}
+                                    href={project.link}
+                                    className="group block"
+                                >
+                                    <div className="h-full bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 border border-gray-100">
+                                        <div className="p-4 flex items-start gap-3">
+                                            <div className={`p-2 rounded-lg bg-gradient-to-br ${project.color} text-white flex-shrink-0`}>
                                                 {project.icon}
                                             </div>
-                                            <div className="flex-1">
-                                                <h3 className="text-xl font-bold text-gray-800 mb-1">{project.title}</h3>
-                                                <p className="text-gray-600 text-sm">{project.description}</p>
+                                            <div>
+                                                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">
+                                                    {project.title}
+                                                </h3>
                                             </div>
-                                            <ChevronRight className={`w-6 h-6 text-gray-400 transition-transform ${activeProject === index ? 'rotate-90' : ''
-                                                }`} />
+                                        </div>
+                                        <div className="px-4 pb-4">
+                                            <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                                                {project.description}
+                                            </p>
+                                            <div className="flex items-center text-orange-500 text-xs font-medium group-hover:text-orange-600 transition-colors">
+                                                Learn more
+                                                <ChevronRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                                            </div>
                                         </div>
                                     </div>
-                                ))}
-                            </div>
-
-                            <div className="bg-white rounded-3xl shadow-2xl p-8">
-                                <div className={`h-64 rounded-2xl bg-gradient-to-br ${projects[activeProject].color} mb-6 flex items-center justify-center`}>
-                                    <div className="text-white text-center">
-                                        {projects[activeProject].icon}
-                                        <h4 className="text-2xl font-bold mt-4">{projects[activeProject].title}</h4>
-                                    </div>
-                                </div>
-                                <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                                    {projects[activeProject].description}
-                                </p>
-                                <button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105" onClick={handlePaystackRedirect}>
-                                    Support This Project
-                                </button>
-                            </div>
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </section>
