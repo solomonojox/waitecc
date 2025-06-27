@@ -21,7 +21,7 @@ const TheSchoolProject = () => {
                 
                 <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">
-                        The School Project
+                        Digital Learning Without Limits: The School Project
                     </h1>
                     <h2 className="text-2xl md:text-3xl font-light mb-8">
                         Nurturing Minds, Building Futures

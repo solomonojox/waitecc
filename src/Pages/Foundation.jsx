@@ -10,19 +10,19 @@ const Foundation = () => {
     const [open, setOpen] = useState(false);
 
     const projects = [
-        {
-            icon: <BookOpen className="w-8 h-8" />,
-            title: "Digital Learning Without Limits",
-            description: "Solar-powered offline libraries bringing thousands of books, videos, and STEM resources to children in underserved communities.",
-            color: "from-blue-500 to-purple-600",
-            link: "/let-a-girl-dream/digital-learning"
-        },
+        // {
+        //     icon: <BookOpen className="w-8 h-8" />,
+        //     title: "Digital Learning Without Limits",
+        //     description: "Solar-powered offline libraries bringing thousands of books, videos, and STEM resources to children in underserved communities.",
+        //     color: "from-blue-500 to-purple-600",
+        //     link: "/let-a-girl-dream/digital-learning"
+        // },
         {
             icon: <Home className="w-8 h-8" />,
-            title: "The School Project",
+            title: "Digital Learning and School Project",
             description: "Creating digital learning hubs, training teachers, and building classrooms that inspire dreams.",
             color: "from-green-500 to-teal-600",
-            link: "/let-a-girl-dream/school-project"
+            link: "/let-a-girl-dream/digital-learning-school-project"
         },
         {
             icon: <Users className="w-8 h-8" />,
@@ -174,7 +174,7 @@ const Foundation = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-5">
                             {projects.map((project, index) => (
                                 <a
                                     key={index}

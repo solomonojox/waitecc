@@ -51,8 +51,8 @@ function App() {
           <Route path="/services/MarketResearch" element={<MarketResearch />} />
           <Route path="/services/CopywritingTechnicalWriting" element={<MarketResearch />} />
 
-          <Route path="/let-a-girl-dream/digital-learning" element={<MarketResearch />} />
-          <Route path="/let-a-girl-dream/school-project" element={<TheSchoolProject />} />
+          {/* <Route path="/let-a-girl-dream/digital-learning" element={<MarketResearch />} /> */}
+          <Route path="/let-a-girl-dream/digital-learning-school-project" element={<TheSchoolProject />} />
           <Route path="/let-a-girl-dream/safe-housing" element={<SafeHousing />} />
           <Route path="/let-a-girl-dream/feeding-future" element={<FeedingTheFuture />} />
           <Route path="/let-a-girl-dream/utility-vehicles" element={<UtilityVehicles />} />
