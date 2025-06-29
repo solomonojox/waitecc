@@ -95,14 +95,14 @@ const Navbar = () => {
       {/* Mobile Navigation Menu with animation */}
       {menuOpen && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50"
+          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-0"
           onClick={closeMenu}
         >
           <div 
-            className="bg-white absolute top-20 right-0 w-64 h-screen shadow-xl py-8 px-6 transform transition-transform duration-300 ease-in-out"
+            className="bg-white absolute top-16 right-0 w-64 h-screen shadow-xl py-8 px-6 transform transition-transform duration-300 ease-in-out z-0"
             onClick={e => e.stopPropagation()}
           >
-            <div className="space-y-6">
+            <div className="space-y-2">
               {navItems.map(item => (
                 <Link
                   key={item.to}
